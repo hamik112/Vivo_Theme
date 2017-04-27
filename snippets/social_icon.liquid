@@ -1,0 +1,39 @@
+<ul>
+    {% if instagram_url != blank %}
+    <li>
+        <a href="{{instagram_url}}" target="_blank" class="fa fa-instagram zoom-in"></a>
+    </li>
+    {% endif %}
+
+    {% if facebook_url != blank %}
+    <li>
+        <a href="{{facebook_url}}" target="_blank" class="fa fa-facebook zoom-in"></a>
+    </li>
+    {% endif %}
+
+    {% if twitter_url != blank %}
+    <li>
+        <a href="{{twitter_url}}" target="_blank" class="fa fa-twitter zoom-in"></a>
+    </li>
+    {% endif %}
+
+
+    {% if youtube_url != blank %}
+    <li>
+        <a href="{{youtube_url}}" target="_blank" class="fa fa-youtube-play zoom-in"></a>
+    </li>
+    {% endif %}
+
+    {% if pinterest_url != blank %}
+    <li>
+        <a href="{{pinterest_url}}" target="_blank" class="fa fa-pinterest zoom-in"></a>
+    </li>
+    {% endif %}
+  
+  	{% if google_plus_url != blank %}
+    <li>
+        <a href="{{google_plus_url}}" target="_blank" class="fa fa-google-plus zoom-in"></a>
+    </li>
+    {% endif %}
+</ul>
+

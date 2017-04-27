@@ -1,0 +1,200 @@
+<div class="tv_main_page">
+    <div class="tv-top">
+        <div class="row-fluid">
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-offset-1 col-xs-10">
+
+                <h1 class="text-center text-uppercase title">
+                    {{ page.title }}
+                </h1>
+                <p class="text-center subtitle">
+                    We're on a mission to transform the health and performance of ONE MILLION people worldwide with the
+                    world's best plant based products.
+                </p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="tv-tab-navs row-fluid">
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-offset-1 col-xs-10">
+                <ul class="nav nav-pills">
+                    <li class="active" id="amba_pill"><a data-toggle="pill" href="#ambassadors">AMBASSADORS</a></li>
+                    <li id="team_pill"><a data-toggle="pill" href="#team">TEAM</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content tv_container">
+        <div id="ambassadors" class="tab-pane fade in active">
+            <ul id="team_member_list1">
+                {% assign article_list1 = blogs.ambassadors.articles %}
+
+                {% for single_article in article_list1 reversed limit: 20 %}
+
+                {% if single_article.metafields.custom_fields["hide_from_team_page"] != 1 %}
+                {% if single_article.content != "" %}
+              
+              	{% assign facebook_url = single_article.metafields.custom_fields["facebook_url"] %}
+	            {% assign twitter_url = single_article.metafields.custom_fields["twitter_url"] %}
+              	{% assign pinterest_url = single_article.metafields.custom_fields["pinterest_url"] %}
+              	{% assign instagram_url = single_article.metafields.custom_fields["instagram_url"] %}
+              	{% assign youtube_url = single_article.metafields.custom_fields["youtube_url"] %}
+              	{% assign google_plus_url = single_article.metafields.custom_fields["google_plus_url"] %}
+              
+
+                {% if single_article.tags contains 'first_article' %}
+                <li class="member col-md-12 col-sm-12 col-xs-12 first_article">
+                    <div class="row-fluid">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="image_cotainer">
+                                <img class="member_img" src="{{ single_article.image.src | img_url: 'grande' }}" alt="">
+                              	<div class="member_social_overlay">
+                          			<div class="social_overlay_icons member_social">
+                            			{% include 'social_icon' %}
+                          			</div>
+                        		</div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <div class="member_info">
+                                <div class="member_title">
+                                    <h1 class="member_name">
+                                        {{ single_article.title }}
+                                    </h1>
+                                    <h2 class="member_job">
+                                        {{ single_article.excerpt }}
+                                    </h2>
+                                </div>
+                                <div class="member_content">
+                                    {{ single_article.content}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {% else %}
+                <li class="member col-md-6 col-sm-6 col-xs-12">
+                    <div class="image_cotainer">
+                        <img class="member_img" src="{{ single_article.image.src | img_url: 'grande' }}" alt="">
+                      	<div class="member_social_overlay">
+                        	<div class="social_overlay_icons member_social">
+                        		{% include 'social_icon' %}
+                        	</div>
+                        </div>
+                    </div>
+                    <div class="member_info">
+                        <div class="member_title">
+                            <h1 class="member_name">
+                                {{ single_article.title }}
+                            </h1>
+                            <h2 class="member_job">
+                                {{ single_article.excerpt }}
+                            </h2>
+                        </div>
+                        <div class="member_content">
+                            {{ single_article.content}}
+                        </div>
+                    </div>
+                </li>
+                {% endif %}
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+
+            </ul>
+        </div>
+
+        <div id="team" class="tab-pane fade">
+            <ul id="team_member_list2">
+                {% assign article_list2 = blogs.our-team.articles %}
+
+                {% for single_article in article_list2 reversed limit: 20 %}
+
+                {% if single_article.metafields.custom_fields["hide_from_team_page"] != 1 %}
+                {% if single_article.content != "" %}
+              
+                            
+              	{% assign facebook_url = single_article.metafields.custom_fields["facebook_url"] %}
+	            {% assign twitter_url = single_article.metafields.custom_fields["twitter_url"] %}
+              	{% assign pinterest_url = single_article.metafields.custom_fields["pinterest_url"] %}
+              	{% assign instagram_url = single_article.metafields.custom_fields["instagram_url"] %}
+              	{% assign youtube_url = single_article.metafields.custom_fields["youtube_url"] %}
+              	{% assign google_plus_url = single_article.metafields.custom_fields["google_plus_url"] %}
+
+
+                {% if single_article.tags contains 'first_article' %}
+                <li class="member col-md-12 col-sm-12 col-xs-12 first_article">
+                    <div class="row-fluid">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="image_cotainer">
+                                <img class="member_img" src="{{ single_article.image.src | img_url: 'grande' }}" alt="">
+                              	<div class="member_social_overlay">
+                          			<div class="social_overlay_icons  member_social">
+                            			{% include 'social_icon' %}
+                          			</div>
+                        		</div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <div class="member_info">
+                                <div class="member_title">
+                                    <h1 class="member_name">
+                                        {{ single_article.title }}
+                                    </h1>
+                                    <h2 class="member_job">
+                                        {{ single_article.excerpt }}
+                                    </h2>
+                                </div>
+                                <div class="member_content">
+                                    {{ single_article.content}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {% else %}
+                <li class="member col-md-6 col-sm-6 col-xs-12">
+                    <div class="image_cotainer">
+                        <img class="member_img" src="{{ single_article.image.src | img_url: 'grande' }}" alt="">
+                        <div class="member_social_overlay">
+                          <div class="social_overlay_icons member_social">
+                            {% include 'social_icon' %}
+                          </div>
+                        </div>
+                    </div>
+                    <div class="member_info">
+                        <div class="member_title">
+                            <h1 class="member_name">
+                                {{ single_article.title }}
+                            </h1>
+                            <h2 class="member_job">
+                                {{ single_article.excerpt }}
+                            </h2>
+                        </div>
+                        <div class="member_content">
+                            {{ single_article.content}}
+                        </div>
+                    </div>
+                </li>
+                {% endif %}
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var page_url = window.location.href;
+    if (page_url.includes('#team')) {
+        jQuery('#amba_pill').removeClass('active');
+        jQuery('#ambassadors').removeClass('in');
+        jQuery('#ambassadors').removeClass('active');
+        jQuery('#team_pill').addClass('active');
+        jQuery('#team').addClass('in');
+        jQuery('#team').addClass('active');
+    }
+</script>

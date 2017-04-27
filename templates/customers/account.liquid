@@ -1,0 +1,116 @@
+<div class="container">				
+  <!-- title -->
+  <div class="title-box">
+    <h1 class="text-left text-uppercase title-under1">{{ 'customer.account.title_main' | t }}</h1>
+  </div>
+  <!-- /title -->				
+  <h4 class="text-uppercase">{{ 'customer.account.title' | t }}</h4>
+  <hr>
+  <!-- /title -->
+  <div class="points_container">
+    <h4 class="text-uppercase">
+      Point Balance: <span class="swell-point-balance">0</span>
+    </h4>
+    <a title="" href="javascript:swellAPI.showRewardsPopup()"><button class="btn btn--ys">Get Rewards</button></a>
+  </div>
+  <hr>
+  <div class="points_container">
+    <h4 class="text-uppercase">
+      Subscriptions Account: 
+    </h4>
+    <a title="" class="text-link" href="/tools/checkout/front_end/login"><button class="btn btn--ys">Go To Subscription Account</button></a>
+  </div>
+  <hr>
+  <div class="points_container">
+    <h4 class="text-uppercase">
+      Refer A Friend
+    </h4><br><br>
+    <iframe id="refcandy-candyjar" data-id="p7wb5hevn26x5z2bqa9hpj51u" data-height="700" data-width="100%" frameborder=0></iframe>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//portal.referralcandy.com/assets/widgets/refcandy-candyjar.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","refcandy-candyjar-js");</script>
+
+    <!--span class="margin-right">Send your friend or family a £5.00 voucher and if they make an order you will get £5.00(500 points) too!</span><a href="javascript:swellAPI.showRewardsPopup()"><button class="btn btn--ys cntr">Send £5.00 Voucher</button></a-->
+  </div>
+  <hr>
+  <h4 class="text-uppercase">
+    	{{ 'customer.account.order_history' | t }}
+  </h4>
+  {% paginate customer.orders by 20 %}{% if customer.orders.size > 0 %}
+  
+  <br>
+  <table class="table-order-history">
+    <thead>
+      <tr>
+        <th>{{ 'customer.orders.order_number' | t }}</th>
+        <th>{{ 'customer.orders.date' | t }}</th>
+        <th>{{ 'customer.orders.payment_status' | t }}</th>
+        <th>{{ 'customer.orders.fulfillment_status' | t }}</th>
+        <th>{{ 'customer.orders.total' | t }}</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      {% for order in customer.orders %}
+      <tr>
+        <td><div class="th-title visible-xs">{{ 'customer.orders.order_number' | t }}</div>{{ order.name | link_to: order.customer_url }}</td>
+        <td><div class="th-title visible-xs">{{ 'customer.orders.date' | t }}</div>{{ order.created_at | date: format: 'short' }}</td>
+        {% if order.cancelled %}
+        <td><div class="th-title visible-xs">{{ 'customer.orders.payment_status' | t }}</div>{{ 'customer.order.cancelled' | t }}</td>
+        {% else %}
+        <td><div class="th-title visible-xs">{{ 'customer.orders.payment_status' | t }}</div>{{ order.financial_status_label }}</td>
+        {% endif %}
+        <td><div class="th-title visible-xs">{{ 'customer.orders.fulfillment_status' | t }}</div>{{ order.fulfillment_status_label }}</td>
+        <td><div class="th-title visible-xs">{{ 'customer.orders.total' | t }}</div>{{ order.total_price | money }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+  {% else %}
+  <p>{{ 'customer.orders.none' | t }}</p>
+  {% endif %}
+  {% if paginate.pages > 1 %}<div class="text-center">{% include 'pagination_buttons' %}</div><br>{% endif %}
+  {% endpaginate %}
+  <hr>
+  <h4 class="text-uppercase">{{ 'customer.account.account_details' | t }}</h4>
+  <div class="row">
+    <div class="col-xs-12 col-sm-7 col-md-5">
+      <table class="table table-params">
+        <tbody>
+          <tr>
+            <td class="text-right"><b>{{ 'customer.account.name' | t }}</b></td>
+            <td>{{ customer.name }}</td>
+          </tr>
+          <tr>
+            <td class="text-right"><b>{{ 'customer.account.email' | t }}</b></td>
+            <td>{{ customer.email }}</td>
+          </tr>
+          
+          {% if customer.default_address != nil %}
+          <tr>
+            <td class="text-right"><b>{{ 'customer.account.address' | t }}</b></td>
+            <td>{{ customer.default_address.address1 }}</td>
+          </tr>
+          {% if customer.default_address.address2 != "" %}<tr>
+            <td class="text-right"><b>{{ 'customer.account.address_2' | t }}</b></td>
+            <td>{{ customer.default_address.address2 }}</td>
+          </tr>{% endif %}
+          <tr>
+            <td class="text-right"><b>{{ 'customer.account.country' | t }}</b></td>
+            <td>{{ customer.default_address.city}}, {% if address.province_code %}{{customer.default_address.province_code}}, {% endif %}{{customer.default_address.country}}</td>
+          </tr>
+          <tr>
+            <td class="text-right"><b>{{ 'customer.account.zip' | t }}</b></td>
+            <td>{{ customer.default_address.zip }}</td>
+          </tr>
+          <tr>
+            <td class="text-right"><b>{{ 'customer.account.phone' | t }}</b></td>
+            <td>{{ customer.default_address.phone }}</td>
+          </tr>
+          {% endif %}
+          
+        </tbody>
+      </table>
+      <a href="/account/addresses" class="btn btn--ys">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a> 
+    </div>
+  </div>									
+</div>

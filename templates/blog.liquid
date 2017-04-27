@@ -1,0 +1,51 @@
+{% assign count = settings.blog_post_count | plus: 0 %}
+{% capture grid %}{% case settings.blog_grid %}{% when 'blog2' %}col-xl-6 col-lg-6 col-md-6 col-sm-12{% when 'blog3' %}col-xl-4 col-lg-4 col-md-4 col-sm-6{% else %}{% endcase %}{% endcapture %}
+
+
+<link rel="stylesheet" id="html5blank-css" href="{{ 'filter_style.css' | asset_url }}" media="all">
+<script type="text/javascript" src="{{ 'jquery_006.js' | asset_url }}"></script>	
+<script type="text/javascript" src="{{ 'mix.js' | asset_url }}"></script>	
+<script type="text/javascript" src="{{ 'customJquery.js' | asset_url }}"></script>
+<div class="siteBox blog-index add" id="blog">
+	<div class="container">
+       <div class="title-box">
+        {% unless current_tags %}<h1 class="text-center text-uppercase title-under1">{{ 'blogs.general.title_main' | t }}</h1>{% else %}<h1 class="text-center text-uppercase title-under">{{ 'blogs.general.title_result' | t }} {{ current_tags.first | replace: '-', ' ' }}</h1>{% endunless %}
+      </div>
+      <section>
+			<!--ul class="filters tal no-border cat-filters">
+				<li class="filter" data-filter="all">All</li>
+				<li class="filter" data-filter=".category-Beauty">Beauty</li>
+				<li class="filter" data-filter=".category-Fitness">Fitness</li>
+				<li class="filter" data-filter=".category-Health">Health</li>
+				<li class="filter active" data-filter=".category-Recipe">Recipes</li>
+            </ul-->
+            {% paginate blog.articles by 48 %}
+            <div id="blogsGrids">
+             {% for article in blog.articles %}
+                <article style="display: inline-block;" class="normalWidth mix category-{{ article.tags }}"> 
+                
+                    <a href="{{ article.url }}">
+                        <div class="imgBox">
+                            <img src="{{ article.image.src | img_url: '1024x1024' }}" alt="Strawberry &amp; Cream Cake (vegan, gluten free)">
+                        </div>
+                        <div class="descBox">
+                            <span class="blogTitle">{{ article.title }}</span>
+                            <span class="date">Posted {{ article.published_at | date: "%B %d, %Y"  }}</span>
+                        </div>
+                    </a>
+                </article>
+              {% endfor %}
+            </div>
+              <div id="pagination" class="span-10">
+                {{ paginate | default_pagination }}
+              </div>
+            {% endpaginate %}
+        </section>
+        <div class="clear"></div>
+    </div>
+    <!-- #container -->
+</div>
+
+
+
+

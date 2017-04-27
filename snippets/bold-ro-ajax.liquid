@@ -1,0 +1,58 @@
+{% comment %}
+Bold: Run recurring checkout script on a click event of any "Checkout" button attached to a "form" tag
+{% endcomment %}
+
+<script>
+
+  jQuery(document).on('click', '[name="checkout"], [href*="checkout"]', function(evt){bold_ro_checkout(this, evt)});
+
+  function bold_ro_checkout(target, evt) {
+    var ro_from = jQuery(target).closest('form');
+    if (typeof mixed_cart != "undefined" && mixed_cart){
+      console.log('Default prevention');
+      evt.preventDefault();
+      
+      jQuery.ajax({
+        type: 'GET',
+        url: '/cart.json',
+        dataType: 'jsonp',
+        async: false,
+        success: function (data) {
+          if (data.hasOwnProperty("items")) {
+            for (var key in data.items) {
+              if (data.items[key].hasOwnProperty('product_description')) {
+                data.items[key].product_description = '';
+              }
+            }
+          }
+          ro_from.append('<input type="hidden" name="shopify_cart" value="' + encodeURIComponent(JSON.stringify(data)) + '">');
+          ro_from.append('<input type="hidden" name="csrf_bold_token" value="775e4634405371661f03beaac36d1c1b" />');
+
+         ro_from.attr('action', "https://recurringcheckout.com/s/" + {{ shop.permanent_domain | remove: '.myshopify.com' | json }} + "/checkout/recurring/" + data.token + "?shop_url=" + {{ shop.permanent_domain | json  }} + google_analytics_get_param_string()).submit();
+        }
+      });
+    }
+  }
+
+  function show_promotional_modal() {
+    $('.hover_modal').tooltip({
+      title: "<div align=\"left\">\n<div><strong>Subscription Details<\/strong><\/div>\n<div>\n<ul>\n<li>Set it and forget it!<\/li>\n<li>Pause, edit or cancel anytime.<\/li>\n<\/ul>\n<\/div>\n<\/div>",
+      html: true,
+      placement: "bottom"
+    });
+  }
+  function google_analytics_get_param_string() {
+    var google_analytics_get_param_string = '';
+    var get_param_string = decodeURIComponent(window.location.search.substring(1));
+    var get_param_array = get_param_string.split('&');
+
+    for (var i = 0; i < get_param_array.length; i++) {
+      var get_param_pair = get_param_array[i].split('=');
+      if (get_param_pair[0] === 'utm_source' || get_param_pair[0] === 'utm_medium' || get_param_pair[0] === 'utm_term' || get_param_pair[0] === 'utm_content' || get_param_pair[0] === 'utm_campaign') {
+        google_analytics_get_param_string = google_analytics_get_param_string + "&" + get_param_pair[0] + '=' + get_param_pair[1];
+      }
+    }
+
+    return google_analytics_get_param_string;
+  }
+</script>

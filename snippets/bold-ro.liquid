@@ -1,0 +1,87 @@
+{% comment %} Last Edited: July 20th 2016 {% endcomment %}
+<div class='product_rp_div p{{ bold-ro.id }}'></div>
+<a class="btn btn-shopify small {{ bold-ro.id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Add to cart</a>
+ 
+<script>
+  generate_rp_tag_{{bold-ro.id}} = false;
+  add_to_order_tag_{{bold-ro.id}} = false;
+  group_id = 0;
+  
+  if (typeof rp_prod == 'undefined'){
+    rp_prod = {};
+  }
+  rp_prod.p{{ bold-ro.id }} = {};
+  {% for rp-variant in bold-ro.variants %}
+  rp_prod.p{{ bold-ro.id }}.v{{ rp-variant.id }} = {{ rp-variant.metafields.bold_rp | json }};
+  {% endfor %}
+  
+  jQuery(document).ready(function(){
+   	addRPHandler_{{bold-ro.id}}();
+    setTimeout(addRPHandler_{{bold-ro.id}}, 700);
+ 
+    function addRPHandler_{{bold-ro.id}}(){
+      jQuery("[name='id'],.single-option-selector").unbind();
+      jQuery("[name='id'],.single-option-selector").change(function(){
+        //Remove all previous calculated prices / group ids / formatted prices / frequency text / etc...
+        //Uncomment the line below if you regenerate the widget everytime the variant changes.
+        //jQuery(".ro_discount_percentage,.ro_unformatted_price,.group_id,.frequency_type_text,.discounted_price").remove();
+            
+        var myForm = $('.product_rp_div.p{{ bold-ro.id }}').closest("form");
+        var idInput = myForm.find("[name='id']");
+        var myVariant = idInput.val();
+        var prodId = {{ bold-ro.id }};
+        // Handle multiple name=id inputs if they are radio buttons
+        if(myForm.find("[name='id']").length > 1 && myForm.find("[name='id']").attr("type") == "radio") {
+          myVariant = myForm.find("[name='id']:checked").val();
+        }
+        
+        group_id = rp_prod['p'+prodId]["v"+myVariant].rp_group_id;
+        
+        {% if shop.metafields.bold_rp.recurring_type != 0 %}
+        	//add recurring order widget
+        	if(group_id){
+          		$('.product_rp_div.p{{ bold-ro.id }}').show();
+        	}
+            
+            if(group_id){
+          		$('.product_rp_div.p{{ bold-ro.id }}').append('<script async class="generate_rp" src="https://ro.boldapps.net/recurring_settings/generate_rp?&shop_url={{ shop.permanent_domain }}&group_id='+group_id+'&customer_id={{ customer.id }}&product_id='+prodId+'&variant_id='+myVariant+'&v=2"></'+''+'script>');
+        		generate_rp_tag_{{bold-ro.id}} = true;
+            }
+        {% endif %}
+        
+        {% unless shop.metafields.bold_rp.recurring_type != 0 %}
+        	//toggle buttons
+        	$('.product_rp_div').hide();
+        	$('#customButton, .{{ bold-ro.id }}_custom_button').hide();
+        	$('.addtocart').show();
+        {% endunless %}
+        
+        if(JSON.stringify(group_id) == null){
+          $('.product_rp_div.p{{ bold-ro.id }}').hide();
+          $('#customButton, .{{ bold-ro.id }}_custom_button').hide();
+          $('.addtocart').show();
+        }
+        
+        //add add_to_order button
+        //Include check for group_id or recurring_cart type.
+        if(!add_to_order_tag_{{ bold-ro.id }} && (group_id || {{shop.metafields.bold_rp.recurring_type | json }} == 0 )) {
+          $('.product_rp_div.p{{ bold-ro.id }}').append('<script async class="add_to_order" src="https://ro.boldapps.net/recurring_settings/add_to_order?&shop_url={{ shop.permanent_domain }}&group_id='+group_id+'&customer_id={{ customer.id }}&product_id='+prodId+'&variant_id='+myVariant+'&v=2"></'+''+'script>');
+        
+        	add_to_order_tag_{{bold-ro.id}} = true;
+            }
+        
+        {% if shop.metafields.bold_rp.recurring_type != 0 %}
+        //toggle add to order btn
+      	if(JSON.stringify(group_id) == null){
+          $('.add_modal_btn').hide();
+        }else{
+          $('.add_modal_btn').show();
+        }
+        {% else %}
+        $('.add_modal_btn').show();
+        {% endif %}
+      });
+      jQuery("[name='id']").change();
+    }
+  });
+</script>

@@ -1,0 +1,798 @@
+<!-- { % for vari in all_products['perform-raw-cacao-1'].variants %}
+	{ { vari.title }}
+{ % endfor %} -->
+
+<div class="step_content_bg thrive-her-landing">
+  
+  <div class="container">
+    <div class="col-xs-12 col-md-12 col-sm-12"> 
+      {{ page.content }}
+      <div class="step_part step_part_sir">	 
+        <h1><span>3.</span> YOUR PERFECT MATCH</h1>
+        <div class="step3_thrive_him">WE RECOMMEND THE PRODUCTS BELOW</div>
+      </div>
+    </div>
+  </div> 
+  
+  <div class="step_suits_content">
+    <section class="vivo_slider">
+      <div>
+		  <!-- first product -->
+          <div id="slide_0" class="item step_suits_inner">
+            <div class="step_part_sir">
+              <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/thrive-her-landing-single.png" alt="" border="0" />
+            </div>
+            <div class="step_bg_white">
+              <div class="step_bg_white_thrive_him">
+                <div class="step_hide_cont">
+                <h2>THRIVE HER</h2>
+                <p>RAW GREEN SUPERFOOD</p>
+                <p><strong>240g / 30 day supply </strong> <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt="" border="0" /></p>
+                
+                <div class="first_container product_description">
+                  {{ all_products['thrive-her-raw-green-superfood'].description }}
+                </div>
+                
+				<div class="price_step_product first_product_price"><span><strike class="strike"></strike></span><span class="price-box__new"></span></div>
+
+                <div class="step_choose">
+                  <!--select class="single-option-selector first_product_options" data-type="first" id="productSelect" name="id" style="width: 65%;">
+                    <option>Loading...</option>
+                  </select-->
+<!-- RO subscribe and save code starts - producy 1----->
+<form id="add-item-form-first" class="first_form" action="/cart/add" method="post">
+   <div id="skt_gc_line_items">
+      <input id="skt_gc_slug" name="properties[Customization]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled" type="hidden">
+   </div>
+
+  <p>CHOOSE SIZE:</p>
+   <select name="id" id="productSelect" class="variant_id1 first_product_options single-option-selector" data-type="first" style="width: 65%;">
+		{% for vari in all_products['thrive-her-raw-green-superfood'].variants %}
+			<option data-sku="{{ vari.sku }}" value="{{ vari.id }}" data-price="{{ vari.price }}"  data-strike="{{ vari.compare_at_price }}">{{ vari.title }}</option>
+		{% endfor %}
+   </select>
+
+   <div class="bold-div" style="display: block;" hidden="">
+      <div class="wrapper">
+         <input name="shopify_customer_id" value="" type="hidden"> 
+         <input name="email" value="" type="hidden"> 
+         <input name="address1" value="" type="hidden"> 
+         <input name="address2" value="" type="hidden"> 
+         <input name="city" value="" type="hidden"> 
+         <input name="company" value="" type="hidden"> 
+         <input name="country" value="" type="hidden"> 
+         <input name="first_name" value="" type="hidden"> 
+         <input name="last_name" value="" type="hidden"> 
+         <input name="phone" value="" type="hidden"> 
+         <input name="province" value="" type="hidden"> 
+         <input name="zip" value="" type="hidden">
+         <div class="product_rp_div p{{ all_products['thrive-her-raw-green-superfood'].id }}">
+            
+           <div class="one_time_div">
+             <label class="one_time_radio_lbl"><input value="0" name="recurring_radio_btn" class="one_time_radio_btn" checked="checked" type="radio"><span> One-time purchase</span></label>
+           </div>
+           <div class="recurring_div bold-ro bold_active">
+				<label style="display:inline-block" class="recurring_radio_lbl step_choose_subc first_ro_container">
+                  <input value="2" name="recurring_radio_btn" class="mixed_radio_btn radio_step" type="radio"> subscribe & save <span class="ro_disc_per">12.5</span>% off (<span class="ro_disc_prc">£34.99</span>)
+				</label>
+               <div class="frequency_div">
+                  <div class="frequency_label">
+                     Deliver every
+                     <select class="frequency_num" name="properties[frequency_num]">
+                        <option value="1" style="display: none;">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                     </select>
+                     <span style="padding-left:10px">Week(s)</span><input class="frequency_type" value="2" name="properties[frequency_type]" type="hidden">
+                  </div>
+                  <div class="prepaid_div" style=""></div>
+               </div>
+            </div>
+         </div>
+         <a class="btn btn-shopify small {{ all_products['thrive-her-raw-green-superfood'].id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Complete subscription</a>
+
+         <input name="quantity" class="input--ys qty-input pull-left" value="1" type="hidden">
+		 
+		 <button type="submit" class="step_suits_inner_btn addtobasket" data-text="first" style="" value="Add subscription to cart">Add To Basket</button>
+        <a href="https://www.vivolife.co.uk/pages/thrive-her"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a>
+      </div>
+      <!-- bold-ro-liquid --> 
+      <div class="bold_add_to_orders" style="display: inline-block;"> </div>
+      <!-- bold-ro-liquid -->
+   </div>
+   <input class="frequency_type_text" value="Week(s)" name="properties[frequency_type_text]" type="hidden">
+   <input class="group_id" value="18668" name="properties[group_id]" type="hidden">
+   <input class="discounted_price" value="£34.99" name="properties[discounted_price]" type="hidden">
+   <input class="ro_discount_percentage" value="12.5" name="properties[_ro_discount_percentage]" type="hidden">
+   <input class="ro_unformatted_price" value="3499" name="properties[_ro_unformatted_price]" type="hidden">
+</form>
+<div class="hidden first_raw">
+  <span class="prdct_featured_image">{{ all_products['thrive-her-raw-green-superfood'].featured_image }}</span>
+  <span class="prdct_link">{{ all_products['thrive-her-raw-green-superfood'].url }}</span>
+  <span class="prdct_ttl">{{ all_products['thrive-her-raw-green-superfood'].title }}</span>
+  <span class="ro_price_0">£34.99</span>
+  <span class="ro_unformatted_price_0">3499</span>
+  <span class="ro_price_1">£61.23</span>
+  <span class="ro_unformatted_price_1">6123</span>
+  <span class="ro_price_2">£83.89</span>
+  <span class="ro_unformatted_price_2">8389</span>
+  <span class="ro_price_3">£157.46</span>
+  <span class="ro_unformatted_price_2">15746</span>
+</div>
+<!--- RO subscribe and save code ends - producy 1------>
+                  <!--div class="step_choose_subc first_ro_container"><input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)</div-->
+
+                </div>
+                <div style="display:none" id="first_raw"></div>
+
+                <!--a class="step_suits_inner_btn addtobasket" date-type="first">Add to basket</a-->
+                <!--div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div-->
+                <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                <div class="step_end_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/JSS6nmSBQis?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+          <!-- second product -->
+    <div>
+          <div id="slide_1" class="item step_suits_inner">
+            <div class="step_part_sir">
+              <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/thrive-her-landing-bundle.png" alt="" border="0" />
+            </div>
+            <div class="step_bg_white">
+              <div class="step_suits_content_link">
+              </div>
+              <div class="step_hide_cont">
+                <h2>{{ all_products['thrive-her-bundle'].title }}</h2>
+                <p>RAW plant protein & BCAA</p>
+                <p><strong>910G / 26 Servings </strong> <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt="" border="0" /></p>   
+                <div class="second_container product_description">
+                  {{ all_products['thrive-her-bundle'].description }}
+                </div>
+                
+                <div class="price_step_product second_product_price"><span><strike class="strike"></strike></span><span class="price-box__new"></span></div>
+
+                <div class="step_choose">
+                  <!--p>CHOOSE SIZE:</p>
+                  <select class="single-option-selector second_product_options" data-type="second" id="product-select" name="id" style="width: 65%;">
+                    <option>Loading...</option>
+                  </select-->
+<!--- RO subscribe and save code starts - producy 2------>
+<!-- RO subscribe and save code starts----->
+<form id="add-item-form-second" class="second_form" action="/cart/add" method="post">
+   <div id="skt_gc_line_items">
+      <input id="skt_gc_slug" name="properties[Customization]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled" type="hidden">
+   </div>
+
+  <p>CHOOSE SIZE:</p>
+	<select name="id" id="productSelect" class="variant_id1 second_product_options single-option-selector" data-type="second" style="width: 65%;">
+		{% for vari in all_products['thrive-her-bundle'].variants %}
+			<option data-sku="{{ vari.sku }}" value="{{ vari.id }}" data-price="{{ vari.price }}"  data-strike="{{ vari.compare_at_price }}">{{ vari.title }}</option>
+		{% endfor %}
+   </select>
+
+   <div class="bold-div" style="display: block;" hidden="">
+      <div class="wrapper">
+         <input name="shopify_customer_id" value="" type="hidden"> 
+         <input name="email" value="" type="hidden"> 
+         <input name="address1" value="" type="hidden"> 
+         <input name="address2" value="" type="hidden"> 
+         <input name="city" value="" type="hidden"> 
+         <input name="company" value="" type="hidden"> 
+         <input name="country" value="" type="hidden"> 
+         <input name="first_name" value="" type="hidden"> 
+         <input name="last_name" value="" type="hidden"> 
+         <input name="phone" value="" type="hidden"> 
+         <input name="province" value="" type="hidden"> 
+         <input name="zip" value="" type="hidden">
+         <div class="product_rp_div p{{ all_products['thrive-her-bundle'].id }}">
+            
+			<div class="one_time_div">
+				<label class="one_time_radio_lbl"><input value="0" name="recurring_radio_btn" checked="checked" class="one_time_radio_btn" type="radio"><span> One-time purchase</span></label>
+			</div>
+           <div class="recurring_div bold-ro bold_active hidden">
+				<label style="display:inline-block" class="recurring_radio_lbl step_choose_subc second_ro_container">
+                  <input value="2" name="recurring_radio_btn" class="mixed_radio_btn radio_step" type="radio"> subscribe & save <span class="ro_disc_per">12.5</span>% off (<span class="ro_disc_prc">£34.99</span>)
+				</label>
+               <div class="frequency_div">
+                  <div class="frequency_label">
+                     Deliver every
+                     <select class="frequency_num" name="properties[frequency_num]">
+                        <option value="1" style="display: none;">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                     </select>
+                     <span style="padding-left:10px">Week(s)</span><input class="frequency_type" value="2" name="properties[frequency_type]" type="hidden">
+                  </div>
+                  <div class="prepaid_div" style=""></div>
+               </div>
+            </div>
+         </div>
+         <a class="btn btn-shopify small {{ all_products['thrive-her-bundle'].id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Complete subscription</a>
+
+         <input name="quantity" class="input--ys qty-input pull-left" value="1" type="hidden">
+		 
+		 <button type="submit" class="step_suits_inner_btn addtobasket" data-text="second" style="" value="Add subscription to cart">Add To Basket</button>
+        <a href="https://www.vivolife.co.uk/pages/thrive-her"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a>
+      </div>
+      <!-- bold-ro-liquid --> 
+      <div class="bold_add_to_orders" style="display: inline-block;"> </div>
+      <!-- bold-ro-liquid -->
+   </div>
+   <input class="frequency_type_text" value="Week(s)" name="properties[frequency_type_text]" type="hidden">
+   <input class="group_id" value="17809" name="properties[group_id]" type="hidden">
+   <input class="discounted_price" value="£34.99" name="properties[discounted_price]" type="hidden">
+   <input class="ro_discount_percentage" value="12.50" name="properties[_ro_discount_percentage]" type="hidden">
+   <input class="ro_unformatted_price" value="3499" name="properties[_ro_unformatted_price]" type="hidden">
+</form>
+<div class="hidden second_raw">
+  <span class="prdct_featured_image">{{ all_products['thrive-her-bundle'].featured_image }}</span>
+  <span class="prdct_link">{{ all_products['thrive-her-bundle'].url }}</span>
+  <span class="prdct_ttl">{{ all_products['thrive-her-bundle'].title }}</span>
+  <span class="ro_price_0">£34.99</span>
+  <span class="ro_unformatted_price_0">3499</span>
+  <span class="ro_price_1">£61.23</span>
+  <span class="ro_unformatted_price_1">6123</span>
+  <span class="ro_price_2">£83.89</span>
+  <span class="ro_unformatted_price_2">8389</span>
+</div>
+<!--- RO subscribe and save code ends - producy 2------>
+                  <!--div class="step_choose_subc second_ro_container">
+                    <input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)
+                  </div-->
+
+                </div>
+                <div style="display:none" id="second_raw"></div>
+
+                <!--a class="step_suits_inner_btn addtobasket" date-type="second">Add to basket</a>
+                <div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div-->
+                <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                 <div class="step_end_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/JSS6nmSBQis?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div>
+          <!-- third product -->
+          <div id="slide_2" class="item step_suits_inner">
+            <div class="step_part_sir">
+              <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/thrive-him-her-landing-bundle.png" alt="" border="0" />
+            </div>
+            <div class="step_bg_white">
+              <div class="step_suits_content_link">
+              </div>
+              <div class="step_hide_cont">
+                <h2>{{ all_products['thrive-him-her-bundle'].title }}</h2>
+                <p>RAW plant protein & BCAA</p>
+                <p><strong>910G / 26 Servings </strong> <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt="" border="0" /></p>
+               
+                <div class="third_container product_description">
+                  {{ all_products['thrive-him-her-bundle'].description }}
+                </div>
+                
+				<div class="price_step_product third_product_price"><span><strike class="strike"></strike></span><span class="price-box__new"></span></div>
+
+                <div class="step_choose">
+                  <!--p>CHOOSE SIZE:</p>
+                  <select class="single-option-selector third_product_options" data-type="third" id="productSelect" name="id" style="width: 65%;">
+                    <option>Loading...</option>
+                  </select-->
+<!-- RO subscribe and save code starts - producy 3----->
+<form id="add-item-form-third" class="third_form" action="/cart/add" method="post">
+   <div id="skt_gc_line_items">
+      <input id="skt_gc_slug" name="properties[Customization]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled" type="hidden">
+   </div>
+
+  <p>CHOOSE SIZE:</p>
+   <select name="id" id="productSelect" class="variant_id1 third_product_options single-option-selector" data-type="third" style="width: 65%;">
+		{% for vari in all_products['thrive-him-her-bundle'].variants %}
+			<option data-sku="{{ vari.sku }}" value="{{ vari.id }}" data-price="{{ vari.price }}"  data-strike="{{ vari.compare_at_price }}">{{ vari.title }}</option>
+		{% endfor %}
+   </select>
+
+   <div class="bold-div" style="display: block;" hidden="">
+      <div class="wrapper">
+         <input name="shopify_customer_id" value="" type="hidden"> 
+         <input name="email" value="" type="hidden"> 
+         <input name="address1" value="" type="hidden"> 
+         <input name="address2" value="" type="hidden"> 
+         <input name="city" value="" type="hidden"> 
+         <input name="company" value="" type="hidden"> 
+         <input name="country" value="" type="hidden"> 
+         <input name="first_name" value="" type="hidden"> 
+         <input name="last_name" value="" type="hidden"> 
+         <input name="phone" value="" type="hidden"> 
+         <input name="province" value="" type="hidden"> 
+         <input name="zip" value="" type="hidden">
+         <div class="product_rp_div p{{ all_products['thrive-him-her-bundle'].id }}">
+            
+           <div class="one_time_div">
+             <label class="one_time_radio_lbl"><input value="0" name="recurring_radio_btn" checked="checked" class="one_time_radio_btn" checked="" type="radio"><span> One-time purchase</span></label>
+           </div>
+           <div class="recurring_div bold-ro bold_active">
+				<label style="display:inline-block" class="recurring_radio_lbl step_choose_subc third_ro_container">
+                  <input value="2" name="recurring_radio_btn" class="mixed_radio_btn radio_step" type="radio"> subscribe
+				</label>
+               <div class="frequency_div">
+                  <div class="frequency_label">
+                     Deliver every
+                     <select class="frequency_num" name="properties[frequency_num]">
+                        <option value="1" style="display: none;">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                     </select>
+                     <span style="padding-left:10px">Week(s)</span><input class="frequency_type" value="2" name="properties[frequency_type]" type="hidden">
+                  </div>
+                  <div class="prepaid_div" style=""></div>
+               </div>
+            </div>
+         </div>
+         <a class="btn btn-shopify small {{ all_products['thrive-him-her-bundle'].id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Complete subscription</a>
+
+         <input name="quantity" class="input--ys qty-input pull-left" value="1" type="hidden">
+		 
+		 <button type="submit" class="step_suits_inner_btn addtobasket" data-text="third" style="" value="Add subscription to cart">Add To Basket</button>
+        <a href="https://www.vivolife.co.uk/pages/thrive-her"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a>
+      </div>
+      <!-- bold-ro-liquid --> 
+      <div class="bold_add_to_orders" style="display: inline-block;"> </div>
+      <!-- bold-ro-liquid -->
+   </div>
+   <input class="frequency_type_text" value="Week(s)" name="properties[frequency_type_text]" type="hidden">
+   <input class="group_id" value="18669" name="properties[group_id]" type="hidden">
+   <input class="discounted_price" value="£69.98" name="properties[discounted_price]" type="hidden">
+   <input class="ro_discount_percentage" value="0.00" name="properties[_ro_discount_percentage]" type="hidden">
+   <input class="ro_unformatted_price" value="6998" name="properties[_ro_unformatted_price]" type="hidden">
+</form>
+<div class="hidden second_raw">
+  <span class="prdct_featured_image">{{ all_products['thrive-her-bundle'].featured_image }}</span>
+  <span class="prdct_link">{{ all_products['thrive-her-bundle'].url }}</span>
+  <span class="prdct_ttl">{{ all_products['thrive-her-bundle'].title }}</span>
+  <span class="ro_price_0">£69.98</span>
+  <span class="ro_unformatted_price_0">6998</span>
+  <span class="ro_price_1">£127.96</span>
+  <span class="ro_unformatted_price_1">12796</span>
+</div>
+<!--- RO subscribe and save code ends - producy 3------>
+                  <!--div class="step_choose_subc third_ro_container"><input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)</div-->
+
+                </div>
+                <div style="display:none" id="third_raw"></div>
+
+                <!--a class="step_suits_inner_btn addtobasket" date-type="third">Add to basket</a>
+                <div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div-->
+                <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                <div class="step_end_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/JSS6nmSBQis?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+      </div>
+<!-- repeat -->
+            <div>
+		  <!-- first product -->
+          <div id="slide_0" class="item step_suits_inner">
+            <div class="step_part_sir">
+              <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/thrive-her-landing-single.png" alt="" border="0" />
+            </div>
+            <div class="step_bg_white">
+              <div class="step_bg_white_thrive_him">
+                <div class="step_hide_cont">
+                <h2>THRIVE HER</h2>
+                <p>RAW GREEN SUPERFOOD</p>
+                <p><strong>240g / 30 day supply </strong> <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt="" border="0" /></p>
+                
+                <div class="first_container product_description">
+                  {{ all_products['thrive-her-raw-green-superfood'].description }}
+                </div>
+                
+				<div class="price_step_product first_product_price"><span><strike class="strike"></strike></span><span class="price-box__new"></span></div>
+
+                <div class="step_choose">
+                  <!--select class="single-option-selector first_product_options" data-type="first" id="productSelect" name="id" style="width: 65%;">
+                    <option>Loading...</option>
+                  </select-->
+<!-- RO subscribe and save code starts - producy 1----->
+<form id="add-item-form-first" class="first_form" action="/cart/add" method="post">
+   <div id="skt_gc_line_items">
+      <input id="skt_gc_slug" name="properties[Customization]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled" type="hidden">
+   </div>
+
+  <p>CHOOSE SIZE:</p>
+   <select name="id" id="productSelect" class="variant_id1 first_product_options single-option-selector" data-type="first" style="width: 65%;">
+		{% for vari in all_products['thrive-her-raw-green-superfood'].variants %}
+			<option data-sku="{{ vari.sku }}" value="{{ vari.id }}" data-price="{{ vari.price }}"  data-strike="{{ vari.compare_at_price }}">{{ vari.title }}</option>
+		{% endfor %}
+   </select>
+
+   <div class="bold-div" style="display: block;" hidden="">
+      <div class="wrapper">
+         <input name="shopify_customer_id" value="" type="hidden"> 
+         <input name="email" value="" type="hidden"> 
+         <input name="address1" value="" type="hidden"> 
+         <input name="address2" value="" type="hidden"> 
+         <input name="city" value="" type="hidden"> 
+         <input name="company" value="" type="hidden"> 
+         <input name="country" value="" type="hidden"> 
+         <input name="first_name" value="" type="hidden"> 
+         <input name="last_name" value="" type="hidden"> 
+         <input name="phone" value="" type="hidden"> 
+         <input name="province" value="" type="hidden"> 
+         <input name="zip" value="" type="hidden">
+         <div class="product_rp_div p{{ all_products['thrive-her-raw-green-superfood'].id }}">
+            
+           <div class="one_time_div">
+             <label class="one_time_radio_lbl"><input value="0" name="recurring_radio_btn" class="one_time_radio_btn" checked="checked" type="radio"><span> One-time purchase</span></label>
+           </div>
+           <div class="recurring_div bold-ro bold_active">
+				<label style="display:inline-block" class="recurring_radio_lbl step_choose_subc first_ro_container">
+                  <input value="2" name="recurring_radio_btn" class="mixed_radio_btn radio_step" type="radio"> subscribe & save <span class="ro_disc_per">12.5</span>% off (<span class="ro_disc_prc">£34.99</span>)
+				</label>
+               <div class="frequency_div">
+                  <div class="frequency_label">
+                     Deliver every
+                     <select class="frequency_num" name="properties[frequency_num]">
+                        <option value="1" style="display: none;">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                     </select>
+                     <span style="padding-left:10px">Week(s)</span><input class="frequency_type" value="2" name="properties[frequency_type]" type="hidden">
+                  </div>
+                  <div class="prepaid_div" style=""></div>
+               </div>
+            </div>
+         </div>
+         <a class="btn btn-shopify small {{ all_products['thrive-her-raw-green-superfood'].id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Complete subscription</a>
+
+         <input name="quantity" class="input--ys qty-input pull-left" value="1" type="hidden">
+		 
+		 <button type="submit" class="step_suits_inner_btn addtobasket" data-text="first" style="" value="Add subscription to cart">Add To Basket</button>
+        <a href="https://www.vivolife.co.uk/pages/thrive-her"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a>
+      </div>
+      <!-- bold-ro-liquid --> 
+      <div class="bold_add_to_orders" style="display: inline-block;"> </div>
+      <!-- bold-ro-liquid -->
+   </div>
+   <input class="frequency_type_text" value="Week(s)" name="properties[frequency_type_text]" type="hidden">
+   <input class="group_id" value="18668" name="properties[group_id]" type="hidden">
+   <input class="discounted_price" value="£34.99" name="properties[discounted_price]" type="hidden">
+   <input class="ro_discount_percentage" value="12.5" name="properties[_ro_discount_percentage]" type="hidden">
+   <input class="ro_unformatted_price" value="3499" name="properties[_ro_unformatted_price]" type="hidden">
+</form>
+<div class="hidden first_raw">
+  <span class="prdct_featured_image">{{ all_products['thrive-her-raw-green-superfood'].featured_image }}</span>
+  <span class="prdct_link">{{ all_products['thrive-her-raw-green-superfood'].url }}</span>
+  <span class="prdct_ttl">{{ all_products['thrive-her-raw-green-superfood'].title }}</span>
+  <span class="ro_price_0">£34.99</span>
+  <span class="ro_unformatted_price_0">3499</span>
+  <span class="ro_price_1">£61.23</span>
+  <span class="ro_unformatted_price_1">6123</span>
+  <span class="ro_price_2">£83.89</span>
+  <span class="ro_unformatted_price_2">8389</span>
+  <span class="ro_price_3">£157.46</span>
+  <span class="ro_unformatted_price_2">15746</span>
+</div>
+<!--- RO subscribe and save code ends - producy 1------>
+                  <!--div class="step_choose_subc first_ro_container"><input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)</div-->
+
+                </div>
+                <div style="display:none" id="first_raw"></div>
+
+                <!--a class="step_suits_inner_btn addtobasket" date-type="first">Add to basket</a-->
+                <!--div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div-->
+                <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                <div class="step_end_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/JSS6nmSBQis?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+          <!-- second product -->
+    <div>
+          <div id="slide_1" class="item step_suits_inner">
+            <div class="step_part_sir">
+              <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/thrive-her-landing-bundle.png" alt="" border="0" />
+            </div>
+            <div class="step_bg_white">
+              <div class="step_suits_content_link">
+              </div>
+              <div class="step_hide_cont">
+                <h2>{{ all_products['thrive-her-bundle'].title }}</h2>
+                <p>RAW plant protein & BCAA</p>
+                <p><strong>910G / 26 Servings </strong> <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt="" border="0" /></p>   
+                <div class="second_container product_description">
+                  {{ all_products['thrive-her-bundle'].description }}
+                </div>
+                
+                <div class="price_step_product second_product_price"><span><strike class="strike"></strike></span><span class="price-box__new"></span></div>
+
+                <div class="step_choose">
+                  <!--p>CHOOSE SIZE:</p>
+                  <select class="single-option-selector second_product_options" data-type="second" id="product-select" name="id" style="width: 65%;">
+                    <option>Loading...</option>
+                  </select-->
+<!--- RO subscribe and save code starts - producy 2------>
+<!-- RO subscribe and save code starts----->
+<form id="add-item-form-second" class="second_form" action="/cart/add" method="post">
+   <div id="skt_gc_line_items">
+      <input id="skt_gc_slug" name="properties[Customization]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled" type="hidden">
+   </div>
+
+  <p>CHOOSE SIZE:</p>
+	<select name="id" id="productSelect" class="variant_id1 second_product_options single-option-selector" data-type="second" style="width: 65%;">
+		{% for vari in all_products['thrive-her-bundle'].variants %}
+			<option data-sku="{{ vari.sku }}" value="{{ vari.id }}" data-price="{{ vari.price }}"  data-strike="{{ vari.compare_at_price }}">{{ vari.title }}</option>
+		{% endfor %}
+   </select>
+
+   <div class="bold-div" style="display: block;" hidden="">
+      <div class="wrapper">
+         <input name="shopify_customer_id" value="" type="hidden"> 
+         <input name="email" value="" type="hidden"> 
+         <input name="address1" value="" type="hidden"> 
+         <input name="address2" value="" type="hidden"> 
+         <input name="city" value="" type="hidden"> 
+         <input name="company" value="" type="hidden"> 
+         <input name="country" value="" type="hidden"> 
+         <input name="first_name" value="" type="hidden"> 
+         <input name="last_name" value="" type="hidden"> 
+         <input name="phone" value="" type="hidden"> 
+         <input name="province" value="" type="hidden"> 
+         <input name="zip" value="" type="hidden">
+         <div class="product_rp_div p{{ all_products['thrive-her-bundle'].id }}">
+            
+			<div class="one_time_div">
+				<label class="one_time_radio_lbl"><input value="0" name="recurring_radio_btn" checked="checked" class="one_time_radio_btn" type="radio"><span> One-time purchase</span></label>
+			</div>
+           <div class="recurring_div bold-ro bold_active hidden">
+				<label style="display:inline-block" class="recurring_radio_lbl step_choose_subc second_ro_container">
+                  <input value="2" name="recurring_radio_btn" class="mixed_radio_btn radio_step" type="radio"> subscribe & save <span class="ro_disc_per">12.5</span>% off (<span class="ro_disc_prc">£34.99</span>)
+				</label>
+               <div class="frequency_div">
+                  <div class="frequency_label">
+                     Deliver every
+                     <select class="frequency_num" name="properties[frequency_num]">
+                        <option value="1" style="display: none;">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                     </select>
+                     <span style="padding-left:10px">Week(s)</span><input class="frequency_type" value="2" name="properties[frequency_type]" type="hidden">
+                  </div>
+                  <div class="prepaid_div" style=""></div>
+               </div>
+            </div>
+         </div>
+         <a class="btn btn-shopify small {{ all_products['thrive-her-bundle'].id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Complete subscription</a>
+
+         <input name="quantity" class="input--ys qty-input pull-left" value="1" type="hidden">
+		 
+		 <button type="submit" class="step_suits_inner_btn addtobasket" data-text="second" style="" value="Add subscription to cart">Add To Basket</button>
+        <a href="https://www.vivolife.co.uk/pages/thrive-her"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a>
+      </div>
+      <!-- bold-ro-liquid --> 
+      <div class="bold_add_to_orders" style="display: inline-block;"> </div>
+      <!-- bold-ro-liquid -->
+   </div>
+   <input class="frequency_type_text" value="Week(s)" name="properties[frequency_type_text]" type="hidden">
+   <input class="group_id" value="17809" name="properties[group_id]" type="hidden">
+   <input class="discounted_price" value="£34.99" name="properties[discounted_price]" type="hidden">
+   <input class="ro_discount_percentage" value="12.50" name="properties[_ro_discount_percentage]" type="hidden">
+   <input class="ro_unformatted_price" value="3499" name="properties[_ro_unformatted_price]" type="hidden">
+</form>
+<div class="hidden second_raw">
+  <span class="prdct_featured_image">{{ all_products['thrive-her-bundle'].featured_image }}</span>
+  <span class="prdct_link">{{ all_products['thrive-her-bundle'].url }}</span>
+  <span class="prdct_ttl">{{ all_products['thrive-her-bundle'].title }}</span>
+  <span class="ro_price_0">£34.99</span>
+  <span class="ro_unformatted_price_0">3499</span>
+  <span class="ro_price_1">£61.23</span>
+  <span class="ro_unformatted_price_1">6123</span>
+  <span class="ro_price_2">£83.89</span>
+  <span class="ro_unformatted_price_2">8389</span>
+</div>
+<!--- RO subscribe and save code ends - producy 2------>
+                  <!--div class="step_choose_subc second_ro_container">
+                    <input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)
+                  </div-->
+
+                </div>
+                <div style="display:none" id="second_raw"></div>
+
+                <!--a class="step_suits_inner_btn addtobasket" date-type="second">Add to basket</a>
+                <div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div-->
+                <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                 <div class="step_end_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/JSS6nmSBQis?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div>
+          <!-- third product -->
+          <div id="slide_2" class="item step_suits_inner">
+            <div class="step_part_sir">
+              <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/thrive-him-her-landing-bundle.png" alt="" border="0" />
+            </div>
+            <div class="step_bg_white">
+              <div class="step_suits_content_link">
+              </div>
+              <div class="step_hide_cont">
+                <h2>{{ all_products['thrive-him-her-bundle'].title }}</h2>
+                <p>RAW plant protein & BCAA</p>
+                <p><strong>910G / 26 Servings </strong> <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt="" border="0" /></p>
+               
+                <div class="third_container product_description">
+                  {{ all_products['thrive-him-her-bundle'].description }}
+                </div>
+                
+				<div class="price_step_product third_product_price"><span><strike class="strike"></strike></span><span class="price-box__new"></span></div>
+
+                <div class="step_choose">
+                  <!--p>CHOOSE SIZE:</p>
+                  <select class="single-option-selector third_product_options" data-type="third" id="productSelect" name="id" style="width: 65%;">
+                    <option>Loading...</option>
+                  </select-->
+<!-- RO subscribe and save code starts - producy 3----->
+<form id="add-item-form-third" class="third_form" action="/cart/add" method="post">
+   <div id="skt_gc_line_items">
+      <input id="skt_gc_slug" name="properties[Customization]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled" type="hidden">
+   </div>
+
+  <p>CHOOSE SIZE:</p>
+   <select name="id" id="productSelect" class="variant_id1 third_product_options single-option-selector" data-type="third" style="width: 65%;">
+		{% for vari in all_products['thrive-him-her-bundle'].variants %}
+			<option data-sku="{{ vari.sku }}" value="{{ vari.id }}" data-price="{{ vari.price }}"  data-strike="{{ vari.compare_at_price }}">{{ vari.title }}</option>
+		{% endfor %}
+   </select>
+
+   <div class="bold-div" style="display: block;" hidden="">
+      <div class="wrapper">
+         <input name="shopify_customer_id" value="" type="hidden"> 
+         <input name="email" value="" type="hidden"> 
+         <input name="address1" value="" type="hidden"> 
+         <input name="address2" value="" type="hidden"> 
+         <input name="city" value="" type="hidden"> 
+         <input name="company" value="" type="hidden"> 
+         <input name="country" value="" type="hidden"> 
+         <input name="first_name" value="" type="hidden"> 
+         <input name="last_name" value="" type="hidden"> 
+         <input name="phone" value="" type="hidden"> 
+         <input name="province" value="" type="hidden"> 
+         <input name="zip" value="" type="hidden">
+         <div class="product_rp_div p{{ all_products['thrive-him-her-bundle'].id }}">
+            
+           <div class="one_time_div">
+             <label class="one_time_radio_lbl"><input value="0" name="recurring_radio_btn" checked="checked" class="one_time_radio_btn" checked="" type="radio"><span> One-time purchase</span></label>
+           </div>
+           <div class="recurring_div bold-ro bold_active">
+				<label style="display:inline-block" class="recurring_radio_lbl step_choose_subc third_ro_container">
+                  <input value="2" name="recurring_radio_btn" class="mixed_radio_btn radio_step" type="radio"> subscribe
+				</label>
+               <div class="frequency_div">
+                  <div class="frequency_label">
+                     Deliver every
+                     <select class="frequency_num" name="properties[frequency_num]">
+                        <option value="1" style="display: none;">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                     </select>
+                     <span style="padding-left:10px">Week(s)</span><input class="frequency_type" value="2" name="properties[frequency_type]" type="hidden">
+                  </div>
+                  <div class="prepaid_div" style=""></div>
+               </div>
+            </div>
+         </div>
+         <a class="btn btn-shopify small {{ all_products['thrive-him-her-bundle'].id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Complete subscription</a>
+
+         <input name="quantity" class="input--ys qty-input pull-left" value="1" type="hidden">
+		 
+		 <button type="submit" class="step_suits_inner_btn addtobasket" data-text="third" style="" value="Add subscription to cart">Add To Basket</button>
+        <a href="https://www.vivolife.co.uk/pages/thrive-her"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a>
+      </div>
+      <!-- bold-ro-liquid --> 
+      <div class="bold_add_to_orders" style="display: inline-block;"> </div>
+      <!-- bold-ro-liquid -->
+   </div>
+   <input class="frequency_type_text" value="Week(s)" name="properties[frequency_type_text]" type="hidden">
+   <input class="group_id" value="18669" name="properties[group_id]" type="hidden">
+   <input class="discounted_price" value="£69.98" name="properties[discounted_price]" type="hidden">
+   <input class="ro_discount_percentage" value="0.00" name="properties[_ro_discount_percentage]" type="hidden">
+   <input class="ro_unformatted_price" value="6998" name="properties[_ro_unformatted_price]" type="hidden">
+</form>
+<div class="hidden second_raw">
+  <span class="prdct_featured_image">{{ all_products['thrive-her-bundle'].featured_image }}</span>
+  <span class="prdct_link">{{ all_products['thrive-her-bundle'].url }}</span>
+  <span class="prdct_ttl">{{ all_products['thrive-her-bundle'].title }}</span>
+  <span class="ro_price_0">£69.98</span>
+  <span class="ro_unformatted_price_0">6998</span>
+  <span class="ro_price_1">£127.96</span>
+  <span class="ro_unformatted_price_1">12796</span>
+</div>
+<!--- RO subscribe and save code ends - producy 3------>
+                  <!--div class="step_choose_subc third_ro_container"><input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)</div-->
+
+                </div>
+                <div style="display:none" id="third_raw"></div>
+
+                <!--a class="step_suits_inner_btn addtobasket" date-type="third">Add to basket</a>
+                <div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div-->
+                <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                <div class="step_end_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/JSS6nmSBQis?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+  </div>
+  <div class="fix_progress"> 
+    <div id="myProgress"><div id="myBar"></div><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/progress_bar.png" alt="" border="0" /></div>
+    <div class="step_part"><a href="https://www.vivolife.co.uk/pages/step-4" class="step_next_btn" > NEXT</a></div>
+  </div>
+</div> 
+
+<script type="text/javascript" language="javascript">
+  $(document).ready(function(){
+    /////////////////////
+    // first product - thrive-her (10044538567)
+    load_content("https://www.vivolife.co.uk/products/thrive-her-raw-green-superfood.js", "first");
+
+    // second product - THRIVE HER BUNDLE(10064804743)
+    load_content("https://www.vivolife.co.uk/products/thrive-her-bundle.js", "second");
+
+    // third product - THRIVE HIM & HER BUNDLE(10108229959)
+    load_content("https://www.vivolife.co.uk/products/thrive-him-her-bundle.js", "third");
+  });
+</script>

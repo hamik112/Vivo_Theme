@@ -1,0 +1,31 @@
+                {% for item in cart.items %}
+                  <div class="single_product">
+                    {% assign property_size = item.properties | size %}
+                    <!--gift card button code starts-->
+                    {% if property_size > 0 %}
+                    {% for p in item.properties %}
+                    {% if p.first == 'Customization' %}
+                    {% unless p.last == blank %}
+                    <a href="/apps/skt-giftcard/?slug={{ p.last }}" target="_blank">Preview</a>
+                    {% endunless %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %} 
+                    <!--gift card button code ends-->
+                    {% include 'bold-ro-price-fix' %}
+                    {% assign prod_index = forloop.index0 %}
+                    <input type="hidden" name="product_id[{{ forloop.index0 }}]" value="{{ item.product.id }}">
+                    <input type="hidden" name="variant_id[{{ forloop.index0 }}]" value="{{ item.variant.id }}">
+                    <input type="hidden" name="quantity[{{ forloop.index0 }}]" value="{{ item.quantity }}">
+
+                    {% assign inv_man = item.variant.inventory_management %}{% assign inv_qua = item.variant.inventory_quantity %}{% unless inv_man %}{% assign inv_qua = 100000 %}{% endunless %}{% if item.variant.available and inv_qua == 0 %}{% assign inv_qua = 100000 %}{% endif %}
+
+                        <!-- bold-ro-liquid -->
+                        {% if item.properties.frequency_num %}
+                        <script>mixed_cart = true;</script>
+                        <br>
+                        <input type="hidden" name="{{ prod_index }}[number]" value="{{ item.properties.frequency_num }}" />
+                        {% endif %}
+                        <!-- bold-ro-liquid -->
+                  </div>
+                {% endfor %}

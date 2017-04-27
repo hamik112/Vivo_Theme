@@ -1,0 +1,120 @@
+<div class="click_menu click_menu_dsk">
+    <div class="cut_menu" data-id="dsk">
+        <a href="javascript:void(0);"><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/menu_cut.png" alt=""
+                                           border="0"/></a>
+    </div>
+    <p><a href="https://www.vivolife.co.uk/pages/step-1">START HERE</a></p>
+    <ul>
+        
+        {% for link in linklists.new-main-menu.links %}
+   			<li>{{ link.title | link_to: link.url }}</li>
+		{% endfor %}
+        <li>
+            <a href="https://www.vivolife.co.uk/account/register">JOIN US</a>
+            <a href="https://www.vivolife.co.uk/account/login">LOGIN</a>
+        </li>
+    </ul>
+</div>
+
+<div class="click_menu click_menu_mob">
+    <div class="cut_menu" data-id="mob"><a href="javascript:void(0);"><img
+                src="https://cdn.shopify.com/s/files/1/1374/7199/files/menu_cut.png" alt="" border="0"/></a></div>
+    <p><a href="javascript:void(0);" class="shop_mob" id="shop_m">Shop</a></p>
+    <div class="shop_drop_mob" style="display:block;">
+        <ul class="shop_drop_m">
+            <li><a href="javascript:void(0);" class="tab" id="health_mob">HEALTH</a></li>
+            <li><a href="javascript:void(0);" class="tab" id="fitness_mob">FITNESS</a></li>
+            <li><a href="javascript:void(0);" class="tab" id="him_mob">HIM</a></li>
+            <li><a href="javascript:void(0);" class="tab" id="her_mob">HER</a></li>
+        </ul>
+        <a class="shop_drop_find_match" href="https://www.vivolife.co.uk/pages/step-1">Not Sure - Find Your Match</a>
+        <div class="slider_fit">
+            <ul>
+                <li class="health_mob_products" style="display:none">
+                    <ul>
+                        <li><a href="https://www.vivolife.co.uk/pages/thrive-her-landing"><h3>THRIVE HER</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_3.png" alt=""
+                                    border="0"/></a></li>
+                        <li><a href="https://www.vivolife.co.uk/pages/thrive-him-landing"><h3>THRIVE HIM</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_4.png" alt=""
+                                    border="0"/></a></li>
+                        <li><a href="https://www.vivolife.co.uk/pages/maca-landing"><h3>MACA</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro5.png" alt=""
+                                    border="0"/></a></li>
+                        <li><a href="https://www.vivolife.co.uk/pages/matcha-landing"><h3>MATCHA</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_matcha.png" alt=""
+                                    border="0"/></a></li>
+                    </ul>
+                </li>
+                <li class="fitness_mob_products" style="display:none">
+                    <ul>
+                        <li><a href="https://www.vivolife.co.uk/pages/performlearnmore-landing"><h3>PERFORM</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_1.png" alt=""
+                                    border="0"/></a></li>
+                        <li><a href="https://www.vivolife.co.uk/pages/sustain-landing"><h3>SUSTAIN</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_2.png" alt=""
+                                    border="0"/></a></li>
+                    </ul>
+                </li>
+                <li class="him_mob_products" style="display:none">
+                    <ul>
+                        <li><a href="https://www.vivolife.co.uk/pages/thrive-him-landing"><h3>THRIVE HIM</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_4.png" alt=""
+                                    border="0"/></a></li>
+                        <li><a href="https://www.vivolife.co.uk/pages/performlearnmore-landing"><h3>PERFORM</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_1.png" alt=""
+                                    border="0"/></a></li>
+                        <li><a href="https://www.vivolife.co.uk/pages/sustain-landing"><h3>SUSTAIN</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_2.png" alt=""
+                                    border="0"/></a></li>
+                        <li><a href="https://www.vivolife.co.uk/pages/maca-landing"><h3>MACA</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro5.png" alt=""
+                                    border="0"/></a></li>
+                        <li><a href="https://www.vivolife.co.uk/pages/matcha-landing"><h3>MATCHA</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_matcha.png" alt=""
+                                    border="0"/></a></li>
+                    </ul>
+                </li>
+                <li class="her_mob_products" style="display:none">
+                    <ul>
+                        <li><a href="https://www.vivolife.co.uk/pages/thrive-her-landing"><h3>THRIVE HER</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_3.png" alt=""
+                                    border="0"/></a></li>
+                        <li><a href="https://www.vivolife.co.uk/pages/performlearnmore-landing"><h3>PERFORM</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_1.png" alt=""
+                                    border="0"/></a></li>
+                        <li><a href="https://www.vivolife.co.uk/pages/sustain-landing"><h3>SUSTAIN</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_2.png" alt=""
+                                    border="0"/></a></li>
+                        <li><a href="https://www.vivolife.co.uk/pages/maca-landing"><h3>MACA</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro5.png" alt=""
+                                    border="0"/></a></li>
+                        <li><a href="https://www.vivolife.co.uk/pages/matcha-landing"><h3>MATCHA</h3><img
+                                    src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_matcha.png" alt=""
+                                    border="0"/></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="shop_drop_btn">
+                <a class="shop_drop_btn_left" href="#" role="button" data-slide="prev"
+                   data-activator="#carousel-W_T_PROS_SAY_HOME"><img
+                        src="https://cdn.shopify.com/s/files/1/1374/7199/files/customer_icon1.png" alt=""
+                        border="0"></a>
+                <a class="shop_drop_btn_right" href="#" role="button" data-slide="prev"
+                   data-activator="#carousel-W_T_PROS_SAY_HOME"><img
+                        src="https://cdn.shopify.com/s/files/1/1374/7199/files/customer_icon2.png" alt=""
+                        border="0"></a>
+            </div>
+        </div>
+    </div>
+    <ul>
+        
+        {% for link in linklists.new-main-menu.links %}
+   			<li>{{ link.title | link_to: link.url }}</li>
+		{% endfor %}
+        <li>
+            <a href="https://www.vivolife.co.uk/account/register">JOIN US</a>
+            <a href="https://www.vivolife.co.uk/account/login">LOGIN</a>
+        </li>
+    </ul>
+</div>

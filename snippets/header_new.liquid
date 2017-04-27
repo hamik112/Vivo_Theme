@@ -1,0 +1,198 @@
+<div class="header_main">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="col-md-5 col-sm-4 col-xs-3">
+        <div class="head_menu">
+          <ul>
+            <li class="menu_icon" id="dsk"><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/menu_icon.png" alt="" border="0" /><a href="javascript:void(0);">Menu</a></li>
+            <li class="menu_icon" id="mob"><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/menu_icon.png" alt="" border="0" /><a href="javascript:void(0);">Menu</a></li>
+            <li><a href="javascript:void(0);" id="shop" class="main_menu">Shop</a></li>
+            <li><a href="https://www.vivolife.co.uk/pages/about" id="about-us" class="main_menu">About Us</a></li>
+          </ul>
+        </div> 
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6">
+        <div class="logo"><a href="/"><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/logo.png" alt="" border="0" /></a></div>
+      </div>
+      <div class="col-md-5 col-sm-4 col-xs-3">
+        <div class="head_menu head_menu_right">
+          <ul>
+            <li><a href="https://www.vivolife.co.uk/blogs/news" id="blog" class="main_menu">Blog</a></li>
+            <li><a href="https://www.vivolife.co.uk/blogs/recipes" id="recipes" class="main_menu">Recipes</a></li>
+            <li><a href="https://www.vivolife.co.uk/pages/team-vivo#team" id="team-vivo" class="main_menu">Team Vivo</a></li>
+            <!--li><a href="javascript:void(0);" id="podcast" class="main_menu">Podcast</a></li-->
+            <li>
+              <a href="https://www.vivolife.co.uk/cart">
+                <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/cart_btn.png" alt="" border="0" />
+                <span class="menu_cart_total">
+                  {% if cart.item_count != 0 %}
+                  {{ cart.item_count }}
+                  {% endif %}
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+
+    {% if template == "index" %}
+      <div class="start_here">
+        <h1><span>Look & Feel</span> <br />Awesome <br /><p>In Just 30 Seconds per Day</p></h1>
+        <div class="btn_start"><a href="pages/step-1">Start here</a></div>
+      </div>
+      <div class="row-fluid start_video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1SJmRwdett4?ecver=1" frameborder="0" allowfullscreen></iframe>
+      </div>
+    {% elsif template == "page.ourplanet" %}
+        <div class="ourplanet_head_text">OUR PLANET</div>
+    {% endif %}
+
+  </div>
+</div>
+
+{% if template == "index" %}
+  <div class="berry">
+    <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/berry.png" alt="" border="0" />
+  </div>
+{% endif %}
+
+<div class="shop_drop">
+  <a class="shop_drop_find_match" href="https://www.vivolife.co.uk/pages/step-1">Not Sure - Find Your Match</a>
+  <ul class="shop_drop_m">
+    <li><a href="javascript:void(0);" class="tab active" id="health">HEALTH</a></li>
+    <li><a href="javascript:void(0);" class="tab" id="fitness">FITNESS</a></li>
+    <li><a href="javascript:void(0);" class="tab" id="him">HIM</a></li>
+    <li><a href="javascript:void(0);" class="tab" id="her">HER</a></li>
+  </ul>
+  <div class="slider_fit">
+    <ul>
+      <li class="health_products" style="display:block">
+        <ul>
+          <li><a href="https://www.vivolife.co.uk/pages/thrive-her-landing"><h3>THRIVE HER</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_3.png" alt="" border="0" /></a></li>
+          <li><a href="https://www.vivolife.co.uk/pages/thrive-him-landing"><h3>THRIVE HIM</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_4.png" alt="" border="0" /></a></li>
+          <li><a href="https://www.vivolife.co.uk/pages/maca-landing"><h3>MACA</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro5.png" alt="" border="0" /></a></li>
+          <li><a href="https://www.vivolife.co.uk/pages/matcha-landing"><h3>MATCHA</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_new_pro_matcha.png" alt="" border="0" /></a></li>
+        </ul>
+      </li>
+      <li class="fitness_products" style="display:none">
+        <ul>
+          <li><a href="https://www.vivolife.co.uk/pages/performlearnmore-landing"><h3>PERFORM</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_1.png" alt="" border="0" /></a></li>
+          <li><a href="https://www.vivolife.co.uk/pages/sustain-landing"><h3>SUSTAIN</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_2.png" alt="" border="0" /></a></li>
+        </ul>
+      </li>
+      <li class="him_products" style="display:none">
+        <ul>
+          <li><a href="https://www.vivolife.co.uk/pages/thrive-him-landing"><h3>THRIVE HIM</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_4.png" alt="" border="0" /></a></li>
+          <li><a href="https://www.vivolife.co.uk/pages/performlearnmore-landing"><h3>PERFORM</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_1.png" alt="" border="0" /></a></li>
+          <li><a href="https://www.vivolife.co.uk/pages/sustain-landing"><h3>SUSTAIN</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_2.png" alt="" border="0" /></a></li>
+          <li><a href="https://www.vivolife.co.uk/pages/maca-landing"><h3>MACA</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro5.png" alt="" border="0" /></a></li>
+          <li><a href="https://www.vivolife.co.uk/pages/matcha-landing"><h3>MATCHA</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_new_pro_matcha.png" alt="" border="0" /></a></li>
+        </ul>
+      </li>
+      <li class="her_products" style="display:none">
+        <ul>
+          <li><a href="https://www.vivolife.co.uk/pages/thrive-her-landing"><h3>THRIVE HER</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_3.png" alt="" border="0" /></a></li>
+          <li><a href="https://www.vivolife.co.uk/pages/performlearnmore-landing"><h3>PERFORM</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_1.png" alt="" border="0" /></a></li>
+          <li><a href="https://www.vivolife.co.uk/pages/sustain-landing"><h3>SUSTAIN</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro_2.png" alt="" border="0" /></a></li>
+          <li><a href="https://www.vivolife.co.uk/pages/maca-landing"><h3>MACA</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_pro5.png" alt="" border="0" /></a></li>
+          <li><a href="https://www.vivolife.co.uk/pages/matcha-landing"><h3>MATCHA</h3><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/shop_new_pro_matcha.png" alt="" border="0" /></a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="shop_drop_btn"> 
+      <a class="shop_drop_btn_left" href="#" role="button" data-slide="prev" data-activator="#carousel-W_T_PROS_SAY_HOME"><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/customer_icon1.png" alt="" border="0"></a>
+      <a class="shop_drop_btn_right" href="#" role="button" data-slide="prev" data-activator="#carousel-W_T_PROS_SAY_HOME"><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/customer_icon2.png" alt="" border="0"></a>
+    </div>
+  </div>
+</div>
+<div class="blog_drop" style="display:none">
+  <!-- Blog dropdown -->
+</div>
+<div class="recipes_drop" style="display:none">
+  <!-- Recipes dropdown -->
+</div>
+<div class="podcast_drop" style="display:none">
+  <!-- Podcast dropdown -->
+</div>
+<script>
+  
+  function show_aside_menu(aside_id)
+    {
+      $(".click_menu_"+aside_id).slideToggle('slow');
+      
+      if(aside_id == "mob")
+      	$("#health_"+aside_id).trigger( "click" );
+      
+      if($('body').hasClass('menu-open'))
+      {
+         $('body').removeClass('menu-open');
+      
+      } else{
+        $('body').addClass('menu-open');
+      }
+    }
+  
+  $( document ).ready(function() {
+    var curr_shown = "";
+    $(".main_menu").click(function() {
+      var this_id = $(this).attr("id");
+
+      if(curr_shown != "")
+      {
+        $("."+curr_shown+"_drop").hide();
+        $("#"+curr_shown).removeClass("active");
+      }
+
+      if(curr_shown == this_id)
+      {
+        $("."+curr_shown+"_drop").hide();
+        $("#"+curr_shown).removeClass("active");
+        curr_shown = "";
+      }
+      else
+      {
+        $("."+this_id+"_drop").show();
+        $(this).addClass("active");
+        curr_shown = this_id;
+      }
+      
+    });
+
+    // products in shop menus dropdown 
+    var curr_shown_tab = "health";
+    $(".shop_drop_m .tab").click(function() {
+
+      var this_id = $(this).attr("id");
+
+      if(curr_shown_tab != this_id)
+      {
+        $("."+curr_shown_tab+"_products").hide();
+        $("#"+curr_shown_tab).removeClass("active");
+
+        $("."+this_id+"_products").show();
+        $(this).addClass("active");
+        curr_shown_tab = this_id;
+      }
+    });
+    
+    // show hide menus on click of menu_icon
+    $(".menu_icon").click(function() {
+      var this_id = $(this).attr("id");
+      show_aside_menu(this_id);
+    });
+    
+    $(".cut_menu").click(function() {
+      var this_id = $(this).data("id");
+      show_aside_menu(this_id);
+    });
+    
+    //////////////////////////////////////
+    
+    // show hide mob shop
+    $(".shop_mob").click(function() {
+      $(".shop_drop_mob").slideToggle('slow');      
+    });
+    
+  });
+</script>

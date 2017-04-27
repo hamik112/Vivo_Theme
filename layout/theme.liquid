@@ -1,0 +1,605 @@
+{% if template contains 'article' and blog.metafields.blogfeeder.use_canonical == 'yes' %}{% assign canonical_url = article.metafields.blogfeeder.canonical %}{% endif %}
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+  {% include 'limespot-global-head-includes' %}
+  <script id=gw_script>(function() {    var xy   = document.createElement('script');    xy.src = "https://static.giftwizard.co/scriptloader.js?shop=vivo-life.myshopify.com";    xy.async = true;    document.head.appendChild(xy)})()</script>
+  <script type="text/javascript">
+    (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/JzroT1Gy1jkgj2ysaNWZcwUxRcI85wmo0IecFvEm/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+  </script>
+  <!-- v1.4.3 -->
+  <meta charset="utf-8">
+  <!--[if IE]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="{{ "general.meta.keywords" | t }}" />
+  <meta name="author" content="{{ "general.meta.author" | t }}">
+  <meta name="google-site-verification" content="pQGWUlocf-v4h8kUgFEbLiKQ9qcpp3TMVNsADl0NgXI" />
+  
+  {% if page.handle contains "brands" %}
+        <meta name="robots" content="noindex, follow" />
+  {% endif %}
+  
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  {{ 'novafont.css.liquid'  | asset_url | stylesheet_tag }}
+  <!-- Social meta ================================================== -->
+  {% include 'social-meta-tags' %}
+
+  <title>{{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}</title>
+  {% if page_description %}<meta name="description" content="{{ page_description | escape }}" />{% endif %}
+  <link rel="canonical" href="{{ canonical_url }}" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  {{ 'jquery.colorbox.js' | asset_url | split:'?' | first | script_tag }}
+
+  {% if settings.use_favicon %}<link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/x-icon" />{% endif %}
+
+  {% if settings.enable_custom_fonts %}
+  {{ 'fonts.js' | asset_url | split:'?' | first | script_tag }}
+  {% else %}
+  {% include "header-fonts" %}
+  {% endif %}
+
+  {% assign blog_name = page_title | handle %}
+  {% assign curr_page_name = template|handle %}
+<!--{ { curr_page_name }} -->
+  {% if curr_page_name == "page-perform" or curr_page_name == "page-perform2" or curr_page_name == "page-saltedmacafreesample" or curr_page_name == "page-jonvenus" %}
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    {{ 'slick_new.js' | asset_url | script_tag }}
+  {% endif %}
+  
+  {% include 'header-css' %}
+  {{ 'responsive.css' | asset_url | stylesheet_tag }}
+  
+  {% include 'header_css_new' %}
+  
+  
+  {%if 
+  	template == "page.our-team" 
+   %}
+  	{{ 'team_page.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+
+  {{ 'modernizr.js' | asset_url | split:'?' | first | script_tag }}
+
+  {{ 'novafont.css.liquid' | asset_url | split:'?' | first | stylesheet_tag }}
+  <!-- jQuery 1.10.1-->
+  {{ 'jquery-2.1.4.min.js' | asset_url | split:'?' | first | script_tag }}
+  {{ 'jquery.cookie.js' | asset_url | split:'?' | first | script_tag }}
+  {% if template contains 'customers' %}
+  {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+  {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
+  {% endif %}
+
+  {{ content_for_header }}
+
+  {% capture l9 %}{% if template == "index" and settings.home_page_layout == 'home-page_layout-9' %} id="layout-9"{% elsif template == "page.home-page_layout-9" %} id="layout-9"{% endif %}{% endcapture %}
+
+  <style>
+    /*Footer*/
+    {% if settings.color_body != settings.color_footer and settings.color_footer != 'rgba(0,0,0,0)' %}
+    footer {
+      padding-top: 60px;
+    }
+    @media (max-width: 767px) {
+      footer {
+        padding-top: 0;
+      }
+    }
+    body:not(.index) #pageContent > .container {
+      border: none;
+      padding-bottom: 0;
+    }
+    footer .subscribe-box input {
+      border: none !important;
+    }
+    {% else %}
+    body.index .layout-4 .container:first-child,
+    body.index .layout-0 .container:first-child {
+      border-top: 1px solid {{ settings.color_footerlines }};
+      padding-top: 60px;
+    }
+    footer .subscribe-box input {
+      border: 1px solid {{ settings.color_footerlines }};
+    }
+    {% endif %}
+  </style>
+  <link href='https://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+  <link href="//db.onlinewebfonts.com/c/efd2c83c0903c21ebe65d4fc8c2ef5bb?family=populairemedium" rel="stylesheet" type="text/css"/>
+
+  <!-- This site is converting	 visitors into subscribers and customers with OptinMonster - http://optinmonster.com --><script>var om577693087769d,om577693087769d_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){om577693087769d_poll(function(){if(window['om_loaded']){if(!om577693087769d){om577693087769d=new OptinMonsterApp();return om577693087769d.init({"s":"20497.577693087769d","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmnstr.com/app/js/api.min.js",o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;om577693087769d=new OptinMonsterApp();om577693087769d.init({"s":"20497.577693087769d","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script><!-- / OptinMonster -->
+  {% include 'bold-ro-ajax' %}
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  
+  <!-- Hotjar Tracking Code for http://www.vivolife.co.uk -->
+  <script>
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:196238,hjsv:5};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  {{ 'GarageGothic-Regular.ttf' | asset_url | split:'?' | first | stylesheet_tag }}
+  <script> $( document ).ready(function(){
+  jQuery('.yotpo.bottomLine').on('click' , function()       {
+    jQuery('a[href=#reviews]').trigger('click');
+  });
+});</script>
+
+  {% if page.handle == "thanks" %}
+  <!-- Facebook Pixel Code -->
+
+  <script>
+
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+
+                             n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+
+                             t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+
+                                                                                                    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+
+
+    fbq('init', '792558850816112');
+
+    fbq('track', "PageView");
+
+    fbq('track', 'Purchase', {value: '1.00', currency: 'GBP'});
+
+  </script>
+
+  <noscript><img height="1" width="1" style="display:none"
+
+                 src="https://www.facebook.com/tr?id=792558850816112&ev=PageView&noscript=1"
+
+                 /></noscript>
+
+  <!-- End Facebook Pixel Code -->
+
+  {% endif %}
+
+
+  {% include "livechat_monitoring_code" %}
+  <!-- bolrd ro ajax cart starts-->
+  <!--{ { 'bold-helper-functions.js' | asset_url | script_tag }}
+  { % include 'bold-ro-ajax-cart' %}
+  { % include 'bold-cart' %}
+  { % include 'bold-cart-item' %}
+    <!-- bolrd ro ajax cart ends-->
+
+
+{% include "livechat_monitoring_code" %}
+  
+</head>
+{% if template == "page.matcha-landing" or template == "page.thrive-him-landing" or template == "page.thrive-her-landing" or template == "page.maca-landing" or template == "page.performlearnmore-landing" or template == "page.sustain-landing" or template == "page.sustain-plantbasedbcaa" or template == "page.thrive-her-rawgreensuperfood" or template == "page.thrive-him-rawgreensuperfood"  or template == "page.jonvenus" or template == "page.perform" %}
+  {% assign landing_page_class = 'its_landing_page' %}
+{% endif %}
+
+{% if template == "index" or template contains "page.home-page_layout" %} 
+  {% assign index_class = 'index' %}
+{% endif %}
+
+{% if curr_page_name == "article" %} 
+  {% assign blog_class = 'its_blog_page' %}
+{% endif %}
+
+<body class="{{ index_class }} {{ landing_page_class }} {{ blog_class }}"   {{ l9 }} id="{{ page_title | handle }}">
+  <!-- Back to top -->
+  <div class="back-to-top"><span class="icon-keyboard_arrow_up"></span></div>
+  <!-- /Back to top -->
+  
+  <!--Aside menu start-->
+  
+  <div class="aside_menu" data-layer=nav>
+    {% include 'aside_menu' %}
+  </div>
+  
+  <!--Aside menu end-->
+  
+  <!-- start app layer -->
+  <div data-layer="app">
+    
+  <div class="header-wrapper">{% include "header_new" %}</div>
+
+  {% if template == "index" %}
+    {% include "home-page_layout_new" %}
+  {% elsif template == "page.home-page_layout-2" %}
+	{{ content_for_layout }}
+  {% elsif template == "index" and settings.home_page_layout == 'home-page_layout-4' %}
+  	{% include "home-page_layout-4" %}
+  {% elsif template == "page.home-page_layout-4" %}
+  	{{ content_for_layout }}
+  {% else %}
+
+<!--
+    { % if template != "index" %}
+      { % unless template contains "page.home-page_layout" %}
+          { % include "breadcrumb" %}
+      { % endunless %}
+    { % endif %}
+-->
+    <div id="pageContent">
+      {{ content_for_layout }}
+      {% if template == "index" %}{% include settings.home_page_layout %}{% endif %}
+    </div>
+
+  	{% include "footer_new" %}
+
+    {% include 'popup_cart' %}
+    {% include 'popup_wishlist' %}
+    {% include 'popup-newsletter' %}
+    {% if template != "page.wishlist" %}{% include 'popup-quickview' %}{% endif %}
+
+	{% include 'preloader-ajax' %}
+
+  {% endif %}
+
+  {% if template == "index" %}
+	{% include "footer_new" %}
+  {% endif %}
+
+  <div class="cart_messages" style="display:none">
+    <div class="edit">{{ 'cart.header.button_edit' | t }}</div>
+    <div class="delete">{{ 'cart.header.button_delete' | t }}</div>
+    <div class="price">{{ 'cart.header.price' | t }}</div>
+    <div class="qty">{{ 'cart.header.quantity' | t }}</div>
+  </div>
+  <div class="button_massage" style="display:none">{{ 'products.product.add_to_cart_html' | t }}</div>
+
+  
+  
+  {% include 'currencies' %}
+
+  <div style='display:none'>
+    <div id='vedio-here' style='padding:10px; background:#fff;'>
+      <video width="100%" height="365" controls>
+        <!--source src="http://www.webfuturetech.com/clients/wp/Vivo.mp4" type="video/mp4"-->
+      </video>
+    </div>
+  </div>
+  <!--cartNotificationOnSuccess-->
+  <style>
+    #cart-box {
+      background-color : #fff;
+      border-bottom:1px solid #000;
+      display: none;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999999999;
+    }
+    #cart-error-box {
+      background-color : #fff;
+      border-bottom:1px solid #000;
+      display: none;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999999999;
+    }
+  </style>
+  <div class="box-popup animate-box" id="cart-box">
+    <div class="row">
+      <div class="box-inner">
+        <div class="col-sm-6">
+          <div class="item">
+            <div data-translate="general.modal.add_to_cart_message" class="heading">Just added to your cart:</div>
+            <div class="product-info">
+              <div class="img">
+                <a href="/products/" class="product-link"><img width="90" alt="" src="" class="product-img"></a>
+              </div>
+              <div class="info">
+                <div class="product-title">
+                  <a href="/products/" class="product-link">Product</a>
+                </div>
+                <div class="product-price">
+                  <span class="money" data-currency-usd="170.00" data-currency="USD">170.00</span>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="action">  
+            <div>
+              <!--button data-translate="general.modal.continue_shopping" class="btn-button close-box" type="button">Keep Shopping</button>
+              <a data-translate="general.modal.go_to_cart" href="/cart" class="btn-button">My Cart</a-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--CartErrorNotification-->
+  <div class="box-popup animate-box" id="cart-error-box">
+    <div class="row"> 
+      <div class="box-inner">
+        <div class="col-sm-6">
+          <div class="item">
+            <h1 class="heading"></h1>
+            <div class="message"></div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="action">
+            <div class="cart">
+              <!--button class="btn-button close-box" type="button">Keep Shopping</button-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <!-- BEEKETINGSCRIPT CODE START -->{% include 'bk-tracking' %}<!-- BEEKETINGSCRIPT CODE END -->
+
+   </div>
+  <!-- end app layer -->
+
+  {% include 'header-js' %}
+  {% include 'header_js_new' %}
+  
+  {% include 'sweettooth-initializer' %}
+  {% include 'sweettooth-tab-widget' %}
+  
+  <!-- This site is converting visitors into subscribers and customers with OptinMonster - http://optinmonster.com :: Campaign Title: Health Hacks - Inline --><div id="om-pvihuphdbmsunsls-holder"></div><script>var pvihuphdbmsunsls,pvihuphdbmsunsls_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){pvihuphdbmsunsls_poll(function(){if(window['om_loaded']){if(!pvihuphdbmsunsls){pvihuphdbmsunsls=new OptinMonsterApp();return pvihuphdbmsunsls.init({"u":"20497.398795","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmnstr.com/app/js/api.min.js",o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;pvihuphdbmsunsls=new OptinMonsterApp();pvihuphdbmsunsls.init({"u":"20497.398795","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script><!-- / OptinMonster -->
+  {% if template contains 'perform' %}
+  {% include 'perform-swell' %}
+  {% endif %}
+
+  <!-- Include Cart.js -->
+  {{ 'cart.min.js' | asset_url | split:'?' | first | script_tag }}
+
+  <!-- Initialise Cart.js once the page has loaded -->
+  <script type="text/javascript">
+    jQuery(function() {
+      CartJS.init({{ cart | json }});
+    });
+    //          <!--$( "select.single-option-selector" ).change(function() {
+    //            alert( $(this).val() );
+    //          });-->
+
+
+    $('.addtocart').click(function(e) {
+      var sel_radio = parseInt($('input[name=recurring_radio_btn]:checked').val());
+      sel_radio = isNaN(sel_radio) ? 0 : sel_radio;
+      if(sel_radio == 0)
+      {
+        var p_title = $(this).parents('.prod-caption').find('.pro-title a').text();
+        var var_id = $(this).parents('form').find('.variant_id').val();
+        var qtty_val = $(this).parents('form').find('.qty-input').val();
+
+        if(var_id !="")
+        {
+          CartJS.removeItemById(var_id); // remove if previously added
+          e.preventDefault();
+          CartJS.addItem(var_id, qtty_val, {}, {
+
+            // Define a success callback to display a success message.
+            "success": function(data, textStatus, jqXHR) {
+              /*Original success code here*/
+              ///////////////////////////////////////////////////
+              jQuery.getJSON('/cart.js', function(cart) {
+                $(".bigcounter").text( cart.item_count );	// new total items
+              });
+              var disc_p = (parseInt(data.discounted_price)/100);
+              $("#cart-box .product-link" ).attr("href", data.url);	// url
+              $("#cart-box .product-img" ).attr("src", data.image); // image
+              $("#cart-box .product-title a" ).text(data.product_title); // title
+              $("#cart-box .product-price .money" ).text("£"+disc_p); // price
+              $("#cart-box" ).slideDown(500); // showbox
+              $("#cart-box").delay(8000).slideUp(500);
+              ///////////////////////////////////////////////////
+            },
+
+            // Define an error callback to display an error message.
+            "error": function(data, jqXHR, textStatus, errorThrown) {
+              console.log(data.responseText);
+              var responseObj = jQuery.parseJSON(data.responseText);
+
+              jQuery.getJSON('/cart.js', function(cart) {
+                console.log(cart);
+                $(".bigcounter").text( cart.item_count );	// new total items
+              });
+
+              $("#cart-error-box .heading" ).text(responseObj.message);
+              $("#cart-error-box .message" ).text(responseObj.description);
+              $("#cart-error-box" ).slideDown(500); // showbox
+              $("#cart-error-box").delay(8000).slideUp(500);
+            }
+          });
+
+        }
+      }
+      else
+      {
+        /*alert("in else");
+        $.ajax({
+          url: "https://www.vivolife.co.uk/cart/add",
+          data: $('#add-item-form').serialize(),
+          type: 'GET',
+          success: function(result){
+            alert("success");
+          }
+        });*/
+        $(this).parents('form').find('.variant_id').remove();
+      }
+    });
+    $('#button-empty').click(function() {
+      CartJS.clear();
+    });
+    $('.close-box').click(function() {
+      $("#cart-box").hide();
+    });
+    {% if page.handle != 'perform-repeat' %}
+    $(window).load(function() {
+      $('#add-item-form .selector-wrapper').css("width","7%");
+      $('.single-option-selector').addClass("hidden");
+
+      $('#productSelect.product-single__variants').addClass("single-option-selector");
+      $('#productSelect.product-single__variants').css("width","65%");
+      $('#productSelect.product-single__variants').show();
+
+
+      // update hidden variant on chane
+      $('select.variant_id1').change(function() {
+        var va = $(this).val();
+        var va_p = $('.'+va).val();
+        $('.variant_id').val(va);
+        $('.price-box.product-info__price').html('<span>'+va_p.slice(0,-4)+'</span>');
+      });
+
+      // update hidden variant on page load
+      var onload_va = $('select.variant_id1').val();
+      var onload_va_p = $('.'+onload_va).val();
+      $('.variant_id').val(onload_va);
+      $('.price-box.product-info__price').html('<span>'+onload_va_p.slice(0,-4)+'</span>');
+    });
+    {% endif %}          
+
+
+
+
+    //    $(window).bind("load", function() {
+    //      alert("loaded2");
+    //		$("body").addClass("loaded");
+    //    });
+
+
+    // sort navigation sub menus for mobile
+    $( document ).ready(function() {
+      // sort alphabatically
+      var mylist = $('.menus_for_mobile .mobile_menu_Health .megamenu__submenu.Product.Category');
+      var listitems = mylist.children('li').get();
+      listitems.sort(function(a, b) {
+        return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+      })
+      $.each(listitems, function(idx, itm) { mylist.append(itm); });
+    });
+  </script>
+  <script type="text/javascript">
+    adroll_adv_id = "6ZOGWWJY5VHBHNBUJRM6H5";
+    adroll_pix_id = "7WN2IYJSLBAUBCPBA6NJY2";
+    // OPTIONAL: provide email to improve user identification
+    // adroll_email = "username@example.com";
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+         document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+
+  </script>
+
+
+  <!-- adword an remarketing code starts -->
+  <!-- Google Code for Remarketing Tag -->
+  <!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 958340065;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/958340065/?value=1&amp;guid=ON&amp;script=0"/>
+    </div>
+  </noscript>
+
+  <!-- Google Code for Adwords Conversions Conversion Page
+In your html page, add the snippet and call
+goog_report_conversion when someone clicks on the
+chosen link or button. -->
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    goog_snippet_vars = function() {
+      var w = window;
+      w.google_conversion_id = 958340065;
+      w.google_conversion_label = "h3o4CO2iw1wQ4bf8yAM";
+      w.google_conversion_value = 1.00;
+      w.google_conversion_currency = "GBP";
+      w.google_remarketing_only = false;
+    }
+    // DO NOT CHANGE THE CODE BELOW.
+    goog_report_conversion = function(url) {
+      goog_snippet_vars();
+      window.google_conversion_format = "3";
+      var opt = new Object();
+      opt.onload_callback = function() {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      }
+      var conv_handler = window['google_trackConversion'];
+      if (typeof(conv_handler) == 'function') {
+        conv_handler(opt);
+      }
+    }
+    /* ]]> */
+  </script>
+  <script type="text/javascript"
+          src="//www.googleadservices.com/pagead/conversion_async.js">
+  </script>
+  <!-- adword an remarketing code ends -->
+  <link href="https://limespot.azureedge.net/storefront/2.0.0/css/recommendations.min.css" rel="stylesheet" />
+  {% include 'limespot-custom-css' %}
+
+  <!-- BEGIN: Google Certified Shops -->
+  <script type="text/javascript"> 
+    var gts = gts || [];
+
+    gts.push(["id", "751849"]);
+    gts.push(["badge_position", "BOTTOM_RIGHT"]);
+    gts.push(["locale", "en_GB"]);
+    gts.push(["google_base_subaccount_id", "751849"]);
+
+    (function() {
+      var gts = document.createElement("script");
+      gts.type = "text/javascript";
+      gts.async = true;
+      gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(gts, s);
+    })();
+  </script>
+  <!-- END: Google Certified Shops -->
+  {% if 
+  	template == "index" or template == "page.step_1" or template == "page.step_2" or template == "page.step_2_female" or template == "page.step_3" or template == "page.Step_3_Perform_Her" or template == "page.step_3_thrive_him" or template == "page.step_3_thrive_her" or template == "page.step_4" or template == "page.maca" or template == "page.matcha" or template == "page.matcha-landing" or template == "page.thrive-him-landing" or template == "page.thrive-her-landing" or template == "page.maca-landing" or template == "page.performlearnmore-landing" or template == "page.sustain-landing" or template == "page.sustain-plantbasedbcaa" or template == "page.thrive-her-rawgreensuperfood" or template == "page.thrive-him-rawgreensuperfood" or template == "page.thrive" or template == "page.thrive-him" or template == "page.sustain" or template == "page.about" or template == "page.thanks" 
+  	or template == "page.perform" or template == "page.performfreesample1" or template == "page.performfreesample2" or template == "page.performfreesample3" or template == "page.perform2" or template == "page.jonvenus" or template == "page.saltedmacafreesample" or template == "page.landing-page" or template == "page.performlearnmore"
+  	or blog_name == "recipes" or blog_name == "news" or curr_page_name == "cart" or curr_page_name == "customers-register" or curr_page_name == "customers-login" or blog_name == "refer-a-friend" or blog_name == "privacy-policy" or blog_name == "returns-policy" or blog_name == "t-amp-c" or blog_name == "get-in-touch" or blog_name == "delivery" or curr_page_name == "article"
+  %}
+    <script type="text/javascript">
+      window.onload = function() {
+        Bold.getCart();
+      };
+
+    </script>
+  {% endif %}
+</body>
+</html>

@@ -1,0 +1,268 @@
+<div class="step_content_bg">
+    <div class="container">
+        <div class="col-xs-12 col-md-12 col-sm-12">
+            {{ page.content }}
+            <div class="step_part step_part_sir">
+                <h1><span>4.</span> ADD ONS</h1>
+                <div class="step3_thrive_him">upgrade your order, upgrade your health.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="step_suits_content">
+        <section class="vivo_slider">
+            <!-- get all products with addon tag-->
+            {% for product in collections.addon.products %}
+            {% assign product_index = product.handle %}
+            <div>
+                <!-- first product -->
+                <div id="slide_{% increment p_index %}" class="item step_suits_inner">
+                    <div class="step_part_sir">
+                        <img src="{{ product | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" boder="0"/>
+                    </div>
+                    <div class="step_bg_white">
+                        <!--div class="step_suits_content_link">
+                          <a href="#">RAW CACAO</a>
+                        </div-->
+                        <div class="step_hide_cont">
+                            {% assign product_name_list = product.title | split:"-" %}
+                            {% assign product_name = product_name_list[0] %}
+                            <h2>{{ product_name }}</h2>
+                            <!-- Product Subtitle-->
+                            <p>{{ product.metafields.custom_fields["product_subtitle"] }}</p>
+                            <p><strong>{{ product.metafields.custom_fields["product_servings"] }}</strong>
+                                <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt=""
+                                     border="0"/>
+                            </p>
+                            <div class="{{product_index}}_container product_description">
+                                {{ product.description }}
+                            </div>
+
+                            <div class="price_step_product {{product_index}}_product_price">
+                                <span><strike class="strike"></strike></span>
+                                <span class="price-box__new"></span>
+                            </div>
+                            <div class="step_choose">
+                                <!--p>CHOOSE FLAVOURS:</p>
+                                <select class="single-option-selector {{product_index}}_product_options" data-type="{{product_index}}" id="productSelect" name="id" style="width: 65%;">
+                                  <option>Loading...</option>
+                                </select-->
+                                <!-- RO subscribe and save code starts - product 1----->
+                                <form id="add-item-form-{{product_index}}" class="{{product_index}}_form" action="/cart/add" method="post">
+                                    <div id="skt_gc_line_items">
+                                        <input id="skt_gc_slug" name="properties[Customization]" value=""
+                                               disabled="disabled" type="hidden">
+                                        <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled"
+                                               type="hidden">
+                                        <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+                                        <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled"
+                                               type="hidden">
+                                    </div>
+
+                                    <p>CHOOSE FLAVOURS:</p>
+                                    <select name="id" id="productSelect"
+                                            class="variant_id1 {{product_index}}_product_options single-option-selector"
+                                            data-type="{{product_index}}" style="width: 65%;">
+                                        {% for vari in all_products[product.handle].variants %}
+                                        <option data-sku="{{ vari.sku }}" value="{{ vari.id }}"
+                                                data-price="{{ vari.price }}" data-strike="{{ vari.compare_at_price }}">
+                                            {{ vari.title }}
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+
+                                    <div class="bold-div" style="display: block;" hidden="">
+                                        <div class="wrapper">
+                                            <input name="shopify_customer_id" value="" type="hidden">
+                                            <input name="email" value="" type="hidden">
+                                            <input name="address1" value="" type="hidden">
+                                            <input name="address2" value="" type="hidden">
+                                            <input name="city" value="" type="hidden">
+                                            <input name="company" value="" type="hidden">
+                                            <input name="country" value="" type="hidden">
+                                            <input name="{{product_index}}_name" value="" type="hidden">
+                                            <input name="last_name" value="" type="hidden">
+                                            <input name="phone" value="" type="hidden">
+                                            <input name="province" value="" type="hidden">
+                                            <input name="zip" value="" type="hidden">
+                                            <div class="product_rp_div p{{ all_products[product.handle].id }}">
+                                                <div class="one_time_div">
+                                                    <label class="one_time_radio_lbl">
+                                                        <input value="0" name="recurring_radio_btn"
+                                                               class="one_time_radio_btn"
+                                                               checked="checked"
+                                                               type="radio"><span> One-time purchase</span>
+                                                    </label>
+                                                </div>
+                                                <div class="recurring_div bold-ro bold_active">
+                                                    <label style="display:inline-block"
+                                                           class="recurring_radio_lbl step_choose_subc {{product_index}}_ro_container">
+                                                        <input value="2" name="recurring_radio_btn"
+                                                               class="mixed_radio_btn radio_step" type="radio">
+                                                        subscribe & save <span class="ro_disc_per"></span>% off (<span
+                                                            class="ro_disc_prc"></span>)
+                                                    </label>
+                                                    <div class="frequency_div">
+                                                        <div class="frequency_label">
+                                                            Deliver every
+                                                            <select class="frequency_num"
+                                                                    name="properties[frequency_num]">
+                                                                <option value="1" style="display: none;">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                            </select>
+                                                            <span style="padding-left:10px">Week(s)</span><input
+                                                                class="frequency_type" value="2"
+                                                                name="properties[frequency_type]" type="hidden">
+                                                        </div>
+                                                        <div class="prepaid_div" style=""></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn btn-shopify small {{ all_products[product.handle].id }}_custom_button"
+                                               data-toggle="modal" data-target="#myModal" style="display:none;">Complete
+                                                subscription</a>
+
+                                            <input name="quantity" class="input--ys qty-input pull-left" value="1"
+                                                   type="hidden">
+
+                                            <button type="submit" class="step_suits_inner_btn addtobasket"
+                                                    data-text="{{product_index}}" style="" value="Add subscription to cart">Add To
+                                                Basket
+                                            </button>
+                                            
+                                          {% if product_index == "thrive-her-raw-green-superfood" %}
+                                          	{% assign learn_more_link = "/pages/thrive-her"%}
+                                          {% elsif product_index == "thrive-him-her-bundle" %}
+                                          	{% assign learn_more_link = blank %}
+                                          {% else %}
+                                          	{% assign learn_more_link = '/pages/' | append: product_index %}
+                                          {% endif %}
+                                           
+                                          {% if learn_more_link != blank %}
+                                            <a href="{{learn_more_link}}">
+                                                <div class="learn_more_step">Learn More <img
+                                                        src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png"
+                                                        alt="" border="0"/></div>
+                                            </a>
+                                          {% endif %}
+                                        </div>
+                                        <!-- bold-ro-liquid -->
+                                        <div class="bold_add_to_orders" style="display: inline-block;"></div>
+                                        <!-- bold-ro-liquid -->
+                                    </div>
+                                    <input class="frequency_type_text" value="Week(s)"
+                                           name="properties[frequency_type_text]" type="hidden">
+                                    <input class="group_id" value="17809" name="properties[group_id]" type="hidden">
+                                    <input class="discounted_price" value="{{ all_products[product.handle].variants.first.price | money_with_currency }}" name="properties[discounted_price]"
+                                           type="hidden">
+                                    <input class="ro_discount_percentage" value="15"
+                                           name="properties[_ro_discount_percentage]" type="hidden">
+                                    <input class="ro_unformatted_price" value="{{ all_products[product.handle].variants.first.price }}"
+                                           name="properties[_ro_unformatted_price]" type="hidden">
+                                </form>
+                                <div class="hidden {{product_index}}_raw">
+                                    <span
+                                        class="prdct_featured_image">{{ all_products[product.handle].featured_image }}</span>
+                                    <span class="prdct_link">{{ all_products[product.handle].url }}</span>
+                                    <span class="prdct_ttl">{{ all_products[product.handle].title }}</span>
+
+                                    {% assign vari_index = 0 %}
+                                    {% for vari in all_products[product.handle].variants %}
+                                    <span class="ro_price_{{ vari_index }}">{{ vari.price | money_with_currency }}</span>
+                                    <span class="ro_unformatted_price_{{ vari_index }}">{{ vari.price }}</span>
+                                    {% assign vari_index = vari_index | plugs: 1 %}
+                                    {% endfor %}
+                                </div>
+                                <!--- RO subscribe and save code ends - product 1------>
+                                <!--div class="step_choose_subc {{product_index}}_ro_container"><input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)</div-->
+
+                            </div>
+                            <div style="display:none" id="{{product_index}}_raw"></div>
+
+                            <!--a class="step_suits_inner_btn addtobasket" date-type="{{product_index}}">Add to basket</a>
+                            <a href="https://www.vivolife.co.uk/pages/matcha"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a-->
+                            <span class="step_money_back">30 day money back guarantee <br/>
+                              {%if product_index != "maca-1" and product_index != "matcha" %}20p goes to STREETGAMES charity{% endif %}</span>
+                            <div class="step_end_video">
+                                <iframe width="560" height="315" src="{{product.metafields.custom_fields['product_youtube_url']}} "
+                                        frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+    <div class="fix_progress">
+        <div id="myProgress">
+            <div id="myBar"></div>
+            <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/progress_bar.png" alt="" border="0"/></div>
+        <!--div class="step_part"><a href="javascript:void(0);" class="step_next_btn" >Final Step</a></div-->
+
+
+        <!-------------------------------------------------------------------------------->
+        <div class="cart_items_container">
+            <form action="/cart" method="post" novalidate>
+                <div style="display:none;">
+                    <!-- Shopping cart table -->
+                    <div class="shopping-cart-table">
+                        <script>mixed_cart = false;</script>    <!-- if false goes to default checkout -->
+                        {% for item in cart.items %}
+                        <!-- bold-ro-liquid -->
+                        {% if item.properties.frequency_num %}
+                        <script>mixed_cart = true;</script><!-- if true goes to RO checkout -->
+                        {% endif %}
+                        <!-- bold-ro-liquid -->
+                        {% endfor %}
+                    </div>
+                    <!-- /Shopping cart table -->
+                    <div class="cart-collaterals">
+                        <input name="shopify_customer_id" type="hidden" value="{{ customer.id }}">
+                        <input name="email" type="hidden" value="{{ customer.email }}">
+                        <input name="address1" type="hidden" value="{{ customer.default_address.address1 }}">
+                        <input name="address2" type="hidden" value="{{ customer.default_address.address2 }}">
+                        <input name="city" type="hidden" value="{{ customer.default_address.city }}">
+                        <input name="company" type="hidden" value="{{ customer.default_address.company }}">
+                        <input name="country" type="hidden" value="{{ customer.default_address.country }}">
+                        <input name="first_name" type="hidden" value="{{ customer.default_address.first_name }}">
+                        <input name="last_name" type="hidden" value="{{ customer.default_address.last_name }}">
+                        <input name="phone" type="hidden" value="{{ customer.default_address.phone }}">
+                        <input name="province" type="hidden" value="{{ customer.default_address.province }}">
+                        <input name="zip" type="hidden" value="{{ customer.default_address.zip }}">
+                        {% include 'bold-ro-cart' %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="step_part"><a href="/checkout" class="step_next_btn">CHECKOUT</a></div>
+                </div>
+            </form>
+        </div>
+        <!-------------------------------------------------------------------------------->
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function(){
+        var step_page = true;
+
+        {% for product in collections.addon.products %}
+        {% assign product_index = product.handle %}
+            load_content("https://www.vivolife.co.uk/products/{{product_index}}.js", "{{product_index}}");
+        {% endfor %}
+    });
+</script>
+
+<style>
+    .shopify-preview-bar {
+        display:none;
+    }
+</style>

@@ -1,0 +1,81 @@
+{% layout none %}
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Note to Shopify Store Owners -->
+	<!-- This template and it's resources may change periodically, we suggest you do not make changes to this template. -->
+    <!-- If you decide you must make changes, create a new giftcard template and assign the product to your new template. In this scenario you may not receive updates to the gift card app product -->
+    <title>Gift Card</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='//fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://f624058c3f5c8edb775a-dea6612566ec344afdf376d2faa6c82f.ssl.cf5.rackcdn.com/normalize-card.css" media="screen, projection" />
+    <link rel="stylesheet" href="https://f624058c3f5c8edb775a-dea6612566ec344afdf376d2faa6c82f.ssl.cf5.rackcdn.com/bookblock.css" media="screen, projection" />
+    <link rel="stylesheet" href="https://f624058c3f5c8edb775a-dea6612566ec344afdf376d2faa6c82f.ssl.cf5.rackcdn.com/card.css" media="screen, projection" />
+    <link rel="stylesheet" href="https://f624058c3f5c8edb775a-dea6612566ec344afdf376d2faa6c82f.ssl.cf5.rackcdn.com/print.css" media="print" />
+    
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://f624058c3f5c8edb775a-dea6612566ec344afdf376d2faa6c82f.ssl.cf5.rackcdn.com/qr-code.js"></script>
+	<script type="text/javascript">
+		//store in object data from liquid
+		var data = {
+				slug: "{% assign property_size = gift_card.properties | size %}{% if property_size > 0 %}{% for p in gift_card.properties %}{% if p.first == 'Customization' %}{% unless p.last == blank %}{{ p.last }}{% endunless %}{% endif %}{% endfor %}{% endif %}",
+				sd: "{{shop.permanent_domain}}",
+				sn: "{{shop.name}}",
+				balance: "{{gift_card.balance}}",
+				currency: "{{gift_card.currency}}", 
+				initial_value: "{{gift_card.initial_value}}",
+				enabled: "{{gift_card.enabled}}",
+				expired: "{{gift_card.expired}}",
+				expires_on: "{{gift_card.expires_on}}",
+				code: "{{gift_card.code}}",
+				qr_identifier: "{{gift_card.qr_identifier}}"	
+		};
+
+		$(document).ready(function(){
+	          
+          var req = $.ajax({
+                  url: 'https://gift-cards.shopkeepertools.com/gift-card-view/'+data.slug,
+                  data: data,
+                  type: 'get',
+                  dataType: 'jsonp',
+                  jsonpCallback: 'jsonpCallBack',
+                  timeout : 20000
+              });
+
+          req.success(function(result) {
+              if (result.success == true) {
+                  $("#skt-gc-template-content").html(result.content);
+              }else {
+                    $("#skt-gc-template-content").html('<div style="color:#000;"><p>There was a problem loading the design of your gift card. The important details are listed below:</p><ul><li>' + data.sn + '</li><li>' + data.sd + '</li><li>Gift Card Code: ' + data.code + '</li><li>Balance: ' + parseInt(data.balance) / 100 + ' ' + data.currency + '</li></ul><br /><br /><p><strong>Refresh the page to view the gift card design.</strong></p></div>');
+              }
+          });
+
+          req.error(function() {
+              $("#skt-gc-template-content").html('<div style="color:#000;"><p>There was a problem loading the design of your gift card. The important details are listed below:</p><ul><li>' + data.sn + '</li><li>' + data.sd + '</li><li>Gift Card Code: ' + data.code + '</li><li>Balance: ' + parseInt(data.balance) / 100 + ' ' + data.currency + '</li></ul><br /><br /><p><strong>Refresh the page to view the gift card design.</strong></p></div>');
+          });
+          
+		});
+	</script>
+</head>
+<body>
+
+	<div id="skt-gc-template-content"><img style="margin-left:auto;margin-right:auto;display:block;margin-top:100px;" src="https://eb17e9bc87b1df62beb5-cd459a00382be9465d4041c18b4f992c.ssl.cf5.rackcdn.com/round_loader.gif" /></div>
+	<script type="text/javascript">
+		$.getScript("https://f624058c3f5c8edb775a-dea6612566ec344afdf376d2faa6c82f.ssl.cf5.rackcdn.com/modernizr.custom.js", function(){
+			$.getScript("https://f624058c3f5c8edb775a-dea6612566ec344afdf376d2faa6c82f.ssl.cf5.rackcdn.com/jquerypp.custom.js", function(){
+				$.getScript("https://f624058c3f5c8edb775a-dea6612566ec344afdf376d2faa6c82f.ssl.cf5.rackcdn.com/jquery.bookblock.min.js", function(){
+					$.getScript("https://f624058c3f5c8edb775a-dea6612566ec344afdf376d2faa6c82f.ssl.cf5.rackcdn.com/giftcard-view.scripts.js", function(){
+					});
+				});
+				
+			});
+			
+		});
+		
+	</script>
+    
+</body>
+
+</html>

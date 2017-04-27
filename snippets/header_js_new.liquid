@@ -1,0 +1,17 @@
+{% if 
+ template == "page.step_3" or template == "page.step_4" or template == "page.Step_3_Perform_Her"
+ or template == "page.performlearnmore-landing" or template == "page.thrive-her-landing" 
+ or template == "page.step_3_thrive_her" or template == "page.thrive-him-landing"
+ or template == "page.step_3_thrive_him" or template == "page.thrive-her-rawgreensuperfood" 
+ or template == "page.thrive-him-rawgreensuperfood"  or template == "page.addtoyoursubscription" 
+ or template == "page.perform" or template == "page.jonvenus" or template == "page.thrive"
+ or product.handle == "thrive-him" or product.handle == "thrive-him-bundle" or product.handle == "thrive-him-her-bundle"
+ or product.handle == "thrive-her-raw-green-superfood" or product.handle == "thrive-her-bundle"
+ or product.handle == "perform-raw-cacao-1" or product.handle == "perform-madagascan-vanilla-2" or product.handle == "perform-salted-maca-caramel-1" or product.handle == "perform-bundle-1" or product.handle == "perform-bundle-1"
+ %}
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  {{ 'slick_new.js' | asset_url | script_tag }}
+{% endif %}
+
+{{ 'matchHeight.min.js' | asset_url | script_tag }}
+{{ 'custom_new.js' | asset_url | script_tag }}

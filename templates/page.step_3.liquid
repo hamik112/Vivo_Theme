@@ -1,0 +1,820 @@
+<!-- { % for vari in all_products['perform-raw-cacao-1'].variants %}
+	{ { vari.title }}
+{ % endfor %} -->
+
+<div class="step_content_bg">
+  <div class="container">
+    <div class="col-xs-12 col-md-12 col-sm-12"> 
+      {{ page.content }}
+      <div class="step_part step_part_sir">	 
+        <h1><span>3.</span> Suits you Sir</h1>
+        <div class="step3_thrive_him">WE RECOMMEND THESE PRODUCTS</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step_suits_content">
+    <section class="vivo_slider">
+      <div>
+		  <!-- first product -->
+          <div id="slide_0" class="item step_suits_inner">
+            <div class="step_part_sir">
+              <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/raw_cacao_step3.png" alt="" border="0" />
+            </div>
+            <div class="step_bg_white">
+              <div class="step_suits_content_link">
+                <a href="#">RAW CACAO</a>
+              </div>
+              <div class="step_hide_cont">
+                <h2>PERFORM</h2>
+                <p>RAW plant protein & BCAA</p>
+                <p><strong>910G / 26 Servings </strong> <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt="" border="0" /></p>
+                
+                <div class="first_container product_description">
+                  {{ all_products['perform-raw-cacao-1'].description }}
+                </div>
+                
+				<div class="price_step_product first_product_price"><span><strike class="strike"></strike></span><span class="price-box__new"></span></div>
+
+                <div class="step_choose">
+                  <!--select class="single-option-selector first_product_options" data-type="first" id="productSelect" name="id" style="width: 65%;">
+                    <option>Loading...</option>
+                  </select-->
+<!-- RO subscribe and save code starts - producy 1----->
+<form id="add-item-form-first" class="first_form" action="/cart/add" method="post">
+   <div id="skt_gc_line_items">
+      <input id="skt_gc_slug" name="properties[Customization]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled" type="hidden">
+   </div>
+
+  <p>CHOOSE SIZE:</p>
+   <select name="id" id="productSelect" class="variant_id1 first_product_options single-option-selector" data-type="first" style="width: 65%;">
+		{% for vari in all_products['perform-raw-cacao-1'].variants %}
+			<option data-sku="{{ vari.sku }}" value="{{ vari.id }}" data-price="{{ vari.price }}"  data-strike="{{ vari.compare_at_price }}">{{ vari.title }}</option>
+		{% endfor %}
+   </select>
+
+   <div class="bold-div" style="display: block;" hidden="">
+      <div class="wrapper">
+         <input name="shopify_customer_id" value="" type="hidden"> 
+         <input name="email" value="" type="hidden"> 
+         <input name="address1" value="" type="hidden"> 
+         <input name="address2" value="" type="hidden"> 
+         <input name="city" value="" type="hidden"> 
+         <input name="company" value="" type="hidden"> 
+         <input name="country" value="" type="hidden"> 
+         <input name="first_name" value="" type="hidden"> 
+         <input name="last_name" value="" type="hidden"> 
+         <input name="phone" value="" type="hidden"> 
+         <input name="province" value="" type="hidden"> 
+         <input name="zip" value="" type="hidden">
+         <div class="product_rp_div p{{ all_products['perform-raw-cacao-1'].id }}">
+            
+           <div class="one_time_div">
+             <label class="one_time_radio_lbl"><input value="0" name="recurring_radio_btn" checked="checked" class="one_time_radio_btn" type="radio"><span> One-time purchase</span></label>
+           </div>
+           <div class="recurring_div bold-ro bold_active">
+		     <label style="display:inline-block" class="recurring_radio_lbl step_choose_subc first_ro_container">
+               <input value="2" name="recurring_radio_btn" class="mixed_radio_btn radio_step" type="radio"> subscribe & save <span class="ro_disc_per">12.5</span>% off (<span class="ro_disc_prc">£34.99</span>)
+		  	 </label>
+               <div class="frequency_div">
+                  <div class="frequency_label">
+                     Deliver every
+                     <select class="frequency_num" name="properties[frequency_num]">
+                        <option value="1" style="display: none;">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                     </select>
+                     <span style="padding-left:10px">Week(s)</span><input class="frequency_type" value="2" name="properties[frequency_type]" type="hidden">
+                  </div>
+                  <div class="prepaid_div" style=""></div>
+               </div>
+            </div>
+         </div>
+         <a class="btn btn-shopify small {{ all_products['perform-raw-cacao-1'].id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Complete subscription</a>
+
+         <input name="quantity" class="input--ys qty-input pull-left" value="1" type="hidden">
+		 
+        <button type="submit" class="step_suits_inner_btn addtobasket" data-text="first" style="" value="Add subscription to cart">Add To Basket</button>
+        <a href="https://www.vivolife.co.uk/pages/performlearnmore"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a>
+      </div>
+      <!-- bold-ro-liquid --> 
+      <div class="bold_add_to_orders" style="display: inline-block;"> </div>
+      <!-- bold-ro-liquid -->
+   </div>
+   <input class="frequency_type_text" value="Week(s)" name="properties[frequency_type_text]" type="hidden">
+   <input class="group_id" value="17809" name="properties[group_id]" type="hidden">
+   <input class="discounted_price" value="£34.99" name="properties[discounted_price]" type="hidden">
+   <input class="ro_discount_percentage" value="12.50" name="properties[_ro_discount_percentage]" type="hidden">
+   <input class="ro_unformatted_price" value="3499" name="properties[_ro_unformatted_price]" type="hidden">
+</form>
+<div class="hidden first_raw">
+  <span class="prdct_featured_image">{{ all_products['perform-raw-cacao-1'].featured_image }}</span>
+  <span class="prdct_link">{{ all_products['perform-raw-cacao-1'].url }}</span>
+  <span class="prdct_ttl">{{ all_products['perform-raw-cacao-1'].title }}</span>
+  <span class="ro_price_0">£34.99</span>
+  <span class="ro_unformatted_price_0">3499</span>
+  <span class="ro_price_1">£61.23</span>
+  <span class="ro_unformatted_price_1">6123</span>
+  <span class="ro_price_2">£83.89</span>
+  <span class="ro_unformatted_price_2">8389</span>
+</div>
+<!--- RO subscribe and save code ends - producy 1------>
+                  <!--div class="step_choose_subc first_ro_container"><input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)</div-->
+
+                </div>
+                <div style="display:none" id="first_raw"></div>
+
+                <!--a class="step_suits_inner_btn addtobasket" date-type="first">Add to basket</a-->
+                <!--div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div-->
+                <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                 <div class="step_end_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/KRuYgjCWsSY?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div>
+          <!-- second product -->
+          <div id="slide_1" class="item step_suits_inner">
+            <div class="step_part_sir">
+              <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/madagascan_vanilla_step_3.png" alt="" border="0" />
+            </div>
+            <div class="step_bg_white">
+              <div class="step_suits_content_link">
+                      <a href="#">Madagascan Vanilla</a>
+              </div>
+              <div class="step_hide_cont">
+                <h2>PERFORM</h2>
+                <p>RAW plant protein & BCAA</p>
+                <p><strong>891g / 27 Servings </strong> <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt="" border="0" /></p>   
+                <div class="second_container product_description">
+                  {{ all_products['perform-madagascan-vanilla-2'].description }}
+                </div>
+                
+                <div class="price_step_product second_product_price"><span><strike class="strike"></strike></span><span class="price-box__new"></span></div>
+
+                <div class="step_choose">
+                  <!--p>CHOOSE SIZE:</p>
+                  <select class="single-option-selector second_product_options" data-type="second" id="product-select" name="id" style="width: 65%;">
+                    <option>Loading...</option>
+                  </select-->
+<!--- RO subscribe and save code starts - producy 2------>
+<!-- RO subscribe and save code starts----->
+<form id="add-item-form-second" class="second_form" action="/cart/add" method="post">
+   <div id="skt_gc_line_items">
+      <input id="skt_gc_slug" name="properties[Customization]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled" type="hidden">
+   </div>
+
+  <p>CHOOSE SIZE:</p>
+	<select name="id" id="productSelect" class="variant_id1 second_product_options single-option-selector" data-type="second" style="width: 65%;">
+		{% for vari in all_products['perform-madagascan-vanilla-2'].variants %}
+			<option data-sku="{{ vari.sku }}" value="{{ vari.id }}" data-price="{{ vari.price }}"  data-strike="{{ vari.compare_at_price }}">{{ vari.title }}</option>
+		{% endfor %}
+   </select>
+
+   <div class="bold-div" style="display: block;" hidden="">
+      <div class="wrapper">
+         <input name="shopify_customer_id" value="" type="hidden"> 
+         <input name="email" value="" type="hidden"> 
+         <input name="address1" value="" type="hidden"> 
+         <input name="address2" value="" type="hidden"> 
+         <input name="city" value="" type="hidden"> 
+         <input name="company" value="" type="hidden"> 
+         <input name="country" value="" type="hidden"> 
+         <input name="first_name" value="" type="hidden"> 
+         <input name="last_name" value="" type="hidden"> 
+         <input name="phone" value="" type="hidden"> 
+         <input name="province" value="" type="hidden"> 
+         <input name="zip" value="" type="hidden">
+         <div class="product_rp_div p{{ all_products['perform-madagascan-vanilla-2'].id }}">
+            
+			<div class="one_time_div">
+				<label class="one_time_radio_lbl"><input value="0" name="recurring_radio_btn" checked="checked" class="one_time_radio_btn" type="radio"><span> One-time purchase</span></label>
+			</div>
+           <div class="recurring_div bold-ro bold_active">
+				<label style="display:inline-block" class="recurring_radio_lbl step_choose_subc second_ro_container">
+                  <input value="2" name="recurring_radio_btn" class="mixed_radio_btn radio_step" type="radio"> subscribe & save <span class="ro_disc_per">12.5</span>% off (<span class="ro_disc_prc">£34.99</span>)
+				</label>
+               <div class="frequency_div">
+                  <div class="frequency_label">
+                     Deliver every
+                     <select class="frequency_num" name="properties[frequency_num]">
+                        <option value="1" style="display: none;">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                     </select>
+                     <span style="padding-left:10px">Week(s)</span><input class="frequency_type" value="2" name="properties[frequency_type]" type="hidden">
+                  </div>
+                  <div class="prepaid_div" style=""></div>
+               </div>
+            </div>
+         </div>
+         <a class="btn btn-shopify small {{ all_products['perform-madagascan-vanilla-2'].id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Complete subscription</a>
+
+         <input name="quantity" class="input--ys qty-input pull-left" value="1" type="hidden">
+		 
+		 <button type="submit" class="step_suits_inner_btn addtobasket" data-text="second" style="" value="Add subscription to cart">Add To Basket</button>
+        <a href="https://www.vivolife.co.uk/pages/performlearnmore"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a>
+      </div>
+      <!-- bold-ro-liquid --> 
+      <div class="bold_add_to_orders" style="display: inline-block;"> </div>
+      <!-- bold-ro-liquid -->
+   </div>
+   <input class="frequency_type_text" value="Week(s)" name="properties[frequency_type_text]" type="hidden">
+   <input class="group_id" value="17809" name="properties[group_id]" type="hidden">
+   <input class="discounted_price" value="£34.99" name="properties[discounted_price]" type="hidden">
+   <input class="ro_discount_percentage" value="12.50" name="properties[_ro_discount_percentage]" type="hidden">
+   <input class="ro_unformatted_price" value="3499" name="properties[_ro_unformatted_price]" type="hidden">
+</form>
+<div class="hidden second_raw">
+  <span class="prdct_featured_image">{{ all_products['perform-madagascan-vanilla-2'].featured_image }}</span>
+  <span class="prdct_link">{{ all_products['perform-madagascan-vanilla-2'].url }}</span>
+  <span class="prdct_ttl">{{ all_products['perform-madagascan-vanilla-2'].title }}</span>
+  <span class="ro_price_0">£34.99</span>
+  <span class="ro_unformatted_price_0">3499</span>
+  <span class="ro_price_1">£61.23</span>
+  <span class="ro_unformatted_price_1">6123</span>
+  <span class="ro_price_2">£83.89</span>
+  <span class="ro_unformatted_price_2">8389</span>
+</div>
+<!--- RO subscribe and save code ends - producy 2------>
+                  <!--div class="step_choose_subc second_ro_container">
+                    <input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)
+                  </div-->
+
+                </div>
+                <div style="display:none" id="second_raw"></div>
+
+                <!--a class="step_suits_inner_btn addtobasket" date-type="second">Add to basket</a>
+                <div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div-->
+                <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                 <div class="step_end_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/KRuYgjCWsSY?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div>
+          <!-- third product -->
+          <div id="slide_2" class="item step_suits_inner">
+            <div class="step_part_sir">
+              <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/caramel_step3_new.png" alt="" border="0" />
+            </div>
+            <div class="step_bg_white">
+              <div class="step_suits_content_link">
+                <a href="#">SALTED MACA CARAMEL</a>
+              </div>
+              <div class="step_hide_cont">
+                <h2>PERFORM</h2>
+                <p>RAW plant protein & BCAA</p>
+                <p><strong>910G / 26 Servings </strong> <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt="" border="0" /></p>
+               
+                <div class="third_container product_description">
+                  {{ all_products['perform-salted-maca-caramel-1'].description }}
+                </div>
+                
+				<div class="price_step_product third_product_price"><span><strike class="strike"></strike></span><span class="price-box__new"></span></div>
+
+                <div class="step_choose">
+                  <!--p>CHOOSE SIZE:</p>
+                  <select class="single-option-selector third_product_options" data-type="third" id="productSelect" name="id" style="width: 65%;">
+                    <option>Loading...</option>
+                  </select-->
+<!-- RO subscribe and save code starts - producy 3----->
+<form id="add-item-form-third" class="third_form" action="/cart/add" method="post">
+   <div id="skt_gc_line_items">
+      <input id="skt_gc_slug" name="properties[Customization]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled" type="hidden">
+   </div>
+
+  <p>CHOOSE SIZE:</p>
+   <select name="id" id="productSelect" class="variant_id1 third_product_options single-option-selector" data-type="third" style="width: 65%;">
+		{% for vari in all_products['perform-salted-maca-caramel-1'].variants %}
+			<option data-sku="{{ vari.sku }}" value="{{ vari.id }}" data-price="{{ vari.price }}"  data-strike="{{ vari.compare_at_price }}">{{ vari.title }}</option>
+		{% endfor %}
+   </select>
+
+   <div class="bold-div" style="display: block;" hidden="">
+      <div class="wrapper">
+         <input name="shopify_customer_id" value="" type="hidden"> 
+         <input name="email" value="" type="hidden"> 
+         <input name="address1" value="" type="hidden"> 
+         <input name="address2" value="" type="hidden"> 
+         <input name="city" value="" type="hidden"> 
+         <input name="company" value="" type="hidden"> 
+         <input name="country" value="" type="hidden"> 
+         <input name="first_name" value="" type="hidden"> 
+         <input name="last_name" value="" type="hidden"> 
+         <input name="phone" value="" type="hidden"> 
+         <input name="province" value="" type="hidden"> 
+         <input name="zip" value="" type="hidden">
+         <div class="product_rp_div p{{ all_products['perform-salted-maca-caramel-1'].id }}">
+            
+           <div class="one_time_div">
+             <label class="one_time_radio_lbl"><input value="0" name="recurring_radio_btn" checked="checked" class="one_time_radio_btn" checked="" type="radio"><span> One-time purchase</span></label>
+           </div>
+           <div class="recurring_div bold-ro bold_active">
+				<label style="display:inline-block" class="recurring_radio_lbl step_choose_subc third_ro_container">
+                  <input value="2" name="recurring_radio_btn" class="mixed_radio_btn radio_step" type="radio"> subscribe & save <span class="ro_disc_per">12.5</span>% off (<span class="ro_disc_prc">£34.99</span>)
+				</label>
+               <div class="frequency_div">
+                  <div class="frequency_label">
+                     Deliver every
+                     <select class="frequency_num" name="properties[frequency_num]">
+                        <option value="1" style="display: none;">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                     </select>
+                     <span style="padding-left:10px">Week(s)</span><input class="frequency_type" value="2" name="properties[frequency_type]" type="hidden">
+                  </div>
+                  <div class="prepaid_div" style=""></div>
+               </div>
+            </div>
+         </div>
+         <a class="btn btn-shopify small {{ all_products['perform-salted-maca-caramel-1'].id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Complete subscription</a>
+
+         <input name="quantity" class="input--ys qty-input pull-left" value="1" type="hidden">
+		 
+		 <button type="submit" class="step_suits_inner_btn addtobasket" data-text="third" style="" value="Add subscription to cart">Add To Basket</button>
+        <a href="https://www.vivolife.co.uk/pages/performlearnmore"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a>
+      </div>
+      <!-- bold-ro-liquid --> 
+      <div class="bold_add_to_orders" style="display: inline-block;"> </div>
+      <!-- bold-ro-liquid -->
+   </div>
+   <input class="frequency_type_text" value="Week(s)" name="properties[frequency_type_text]" type="hidden">
+   <input class="group_id" value="17809" name="properties[group_id]" type="hidden">
+   <input class="discounted_price" value="£34.99" name="properties[discounted_price]" type="hidden">
+   <input class="ro_discount_percentage" value="12.50" name="properties[_ro_discount_percentage]" type="hidden">
+   <input class="ro_unformatted_price" value="3499" name="properties[_ro_unformatted_price]" type="hidden">
+</form>
+<div class="hidden third_raw">
+  <span class="prdct_featured_image">{{ all_products['perform-salted-maca-caramel-1'].featured_image }}</span>
+  <span class="prdct_link">{{ all_products['perform-salted-maca-caramel-1'].url }}</span>
+  <span class="prdct_ttl">{{ all_products['perform-salted-maca-caramel-1'].title }}</span>
+  <span class="ro_price_0">£34.99</span>
+  <span class="ro_unformatted_price_0">3499</span>
+  <span class="ro_price_1">£61.23</span>
+  <span class="ro_unformatted_price_1">6123</span>
+  <span class="ro_price_2">£83.89</span>
+  <span class="ro_unformatted_price_2">8389</span>
+</div>
+<!--- RO subscribe and save code ends - producy 3------>
+                  <!--div class="step_choose_subc third_ro_container"><input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)</div-->
+
+                </div>
+                <div style="display:none" id="third_raw"></div>
+
+                <!--a class="step_suits_inner_btn addtobasket" date-type="third">Add to basket</a>
+                <div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div-->
+                <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                <div class="step_end_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/KRuYgjCWsSY?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    
+<!--////repeat-->
+      <div>
+		  <!-- fourth product -->
+          <div id="slide_3" class="item step_suits_inner">
+            <div class="step_part_sir">
+              <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/perform_bundle_step3_new2.png" alt="" border="0" />
+            </div>
+            <div class="step_bg_white">
+              <div class="step_suits_content_link">
+                <a href="#">{{ all_products['perform-bundle-1'].title }}</a>
+              </div>
+              <div class="step_hide_cont">
+                <h2>PERFORM</h2>
+                <p>RAW plant protein & BCAA</p>
+                <p><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt="" border="0" /></p>
+               
+                <div class="fourth_container product_description">
+                  {{ all_products['perform-bundle-1'].description }} 
+                </div>
+                
+				<div class="price_step_product fourth_product_price"><span><strike class="strike"></strike></span><span class="price-box__new"></span></div>
+
+                <div class="step_choose">
+                  <!--p>CHOOSE SIZE:</p>
+                  <select class="single-option-selector fourth_product_options" data-type="fourth" id="productSelect" name="id" style="width: 65%;">
+                    <option>Loading...</option>
+                  </select-->
+<!-- RO subscribe and save code starts - producy 4----->
+<form id="add-item-form-fourth" class="fourth_form" action="/cart/add" method="post">
+   <div id="skt_gc_line_items">
+      <input id="skt_gc_slug" name="properties[Customization]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled" type="hidden">
+   </div>
+
+  <p>CHOOSE SIZE:</p>
+   <select name="id" id="productSelect" class="variant_id1 fourth_product_options single-option-selector" data-type="fourth" style="width: 65%;">
+		{% for vari in all_products['perform-bundle-1'].variants %}
+			<option data-sku="{{ vari.sku }}" value="{{ vari.id }}" data-price="{{ vari.price }}"  data-strike="{{ vari.compare_at_price }}">{{ vari.title }}</option>
+		{% endfor %}
+   </select>
+
+   <div class="bold-div" style="display: block;" hidden="">
+      <div class="wrapper">
+         <input name="shopify_customer_id" value="" type="hidden"> 
+         <input name="email" value="" type="hidden"> 
+         <input name="address1" value="" type="hidden"> 
+         <input name="address2" value="" type="hidden"> 
+         <input name="city" value="" type="hidden"> 
+         <input name="company" value="" type="hidden"> 
+         <input name="country" value="" type="hidden"> 
+         <input name="first_name" value="" type="hidden"> 
+         <input name="last_name" value="" type="hidden"> 
+         <input name="phone" value="" type="hidden"> 
+         <input name="province" value="" type="hidden"> 
+         <input name="zip" value="" type="hidden">
+         <div class="product_rp_div p{{ all_products['perform-bundle-1'].id }}">
+            
+           <div class="one_time_div">
+             <label class="one_time_radio_lbl"><input value="0" name="recurring_radio_btn" checked="checked" class="one_time_radio_btn" type="radio"><span> One-time purchase</span></label>
+           </div>
+           <div class="recurring_div bold-ro bold_active hidden">
+				<label style="display:inline-block" class="recurring_radio_lbl step_choose_subc fourth_ro_container">
+                  <input value="2" name="recurring_radio_btn" class="mixed_radio_btn radio_step" type="radio"> subscribe & save <span class="ro_disc_per">12.5</span>% off (<span class="ro_disc_prc">£34.99</span>)
+				</label>
+               <div class="frequency_div">
+                  <div class="frequency_label">
+                     Deliver every
+                     <select class="frequency_num" name="properties[frequency_num]">
+                        <option value="1" style="display: none;">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                     </select>
+                     <span style="padding-left:10px">Week(s)</span><input class="frequency_type" value="2" name="properties[frequency_type]" type="hidden">
+                  </div>
+                  <div class="prepaid_div" style=""></div>
+               </div>
+            </div>
+         </div>
+         <a class="btn btn-shopify small {{ all_products['perform-bundle-1'].id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Complete subscription</a>
+
+         <input name="quantity" class="input--ys qty-input pull-left" value="1" type="hidden">
+		 
+		 <button type="submit" class="step_suits_inner_btn addtobasket" data-text="fourth" style="" value="Add subscription to cart">Add To Basket</button>
+        <a href="https://www.vivolife.co.uk/pages/performlearnmore"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a>
+      </div>
+      <!-- bold-ro-liquid --> 
+      <div class="bold_add_to_orders" style="display: inline-block;"> </div>
+      <!-- bold-ro-liquid -->
+   </div>
+   <input class="frequency_type_text" value="Week(s)" name="properties[frequency_type_text]" type="hidden">
+   <input class="group_id" value="17809" name="properties[group_id]" type="hidden">
+   <input class="discounted_price" value="£34.99" name="properties[discounted_price]" type="hidden">
+   <input class="ro_discount_percentage" value="12.50" name="properties[_ro_discount_percentage]" type="hidden">
+   <input class="ro_unformatted_price" value="34.99" name="properties[_ro_unformatted_price]" type="hidden">
+</form>
+<div class="hidden fourth_raw">
+  <span class="prdct_featured_image">{{ all_products['perform-bundle-1'].featured_image }}</span>
+  <span class="prdct_link">{{ all_products['perform-bundle-1'].url }}</span>
+  <span class="prdct_ttl">{{ all_products['perform-bundle-1'].title }}</span>
+  <span class="ro_price_0">£34.99</span>
+  <span class="ro_unformatted_price_0">3499</span>
+  <span class="ro_price_1">£61.23</span>
+  <span class="ro_unformatted_price_1">6123</span>
+  <span class="ro_price_2">£83.89</span>
+  <span class="ro_unformatted_price_2">8389</span>
+</div>
+<!--- RO subscribe and save code ends - producy 4------>
+                  <!--div class="step_choose_subc fourth_ro_container"><input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)</div-->
+
+                </div>
+                <div style="display:none" id="fourth_raw"></div>
+
+                <!--a class="step_suits_inner_btn addtobasket" date-type="fourth">Add to basket</a>
+                <div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div-->
+                <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                <div class="step_end_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/KRuYgjCWsSY?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div>
+          <!-- fifth product -->
+          <div id="slide_4" class="item step_suits_inner">
+            <div class="step_part_sir">
+              <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/perform_bundle_pro_step3_new2.png" alt="" border="0" />
+            </div>
+            <div class="step_bg_white">
+              <div class="step_suits_content_link">
+                <a href="#">{{ all_products['perform-bundle-pro'].title }}</a>
+              </div>
+              <div class="step_hide_cont">
+                <h2>PERFORM</h2>
+                <p>RAW plant protein & BCAA</p>
+                <p><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt="" border="0" /></p>
+               	   
+                <div class="fifth_container product_description">
+                  {{ all_products['perform-bundle-pro'].description }}
+                </div>
+                
+                <div class="price_step_product fifth_product_price"><span><strike class="strike"></strike></span><span class="price-box__new"></span></div>
+
+                <div class="step_choose">
+                  <!--p>CHOOSE SIZE:</p>
+                  <select class="single-option-selector fifth_product_options" data-type="fifth" id="product-select" name="id" style="width: 65%;">
+                    <option>Loading...</option>
+                  </select-->
+<!--- RO subscribe and save code starts - producy 5------>
+<form id="add-item-form-fifth" class="fifth_form" action="/cart/add" method="post">
+   <div id="skt_gc_line_items">
+      <input id="skt_gc_slug" name="properties[Customization]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled" type="hidden">
+   </div>
+
+  <p>CHOOSE SIZE:</p>
+	<select name="id" id="productSelect" class="variant_id1 fifth_product_options single-option-selector" data-type="fifth" style="width: 65%;">
+		{% for vari in all_products['perform-bundle-pro'].variants %}
+			<option data-sku="{{ vari.sku }}" value="{{ vari.id }}" data-price="{{ vari.price }}"  data-strike="{{ vari.compare_at_price }}">{{ vari.title }}</option>
+		{% endfor %}
+   </select>
+
+   <div class="bold-div" style="display: block;" hidden="">
+      <div class="wrapper">
+         <input name="shopify_customer_id" value="" type="hidden"> 
+         <input name="email" value="" type="hidden"> 
+         <input name="address1" value="" type="hidden"> 
+         <input name="address2" value="" type="hidden"> 
+         <input name="city" value="" type="hidden"> 
+         <input name="company" value="" type="hidden"> 
+         <input name="country" value="" type="hidden"> 
+         <input name="first_name" value="" type="hidden"> 
+         <input name="last_name" value="" type="hidden"> 
+         <input name="phone" value="" type="hidden"> 
+         <input name="province" value="" type="hidden"> 
+         <input name="zip" value="" type="hidden">
+         <div class="product_rp_div p{{ all_products['perform-bundle-pro'].id }}">
+            
+			<div class="one_time_div">
+				<label class="one_time_radio_lbl"><input value="0" name="recurring_radio_btn" checked="checked" class="one_time_radio_btn" type="radio"><span> One-time purchase</span></label>
+			</div>
+           <div class="recurring_div bold-ro bold_active hidden">
+				<label style="display:inline-block" class="recurring_radio_lbl step_choose_subc fifth_ro_container">
+                  <input value="2" name="recurring_radio_btn" class="mixed_radio_btn radio_step" type="radio"> subscribe & save <span class="ro_disc_per">12.5</span>% off (<span class="ro_disc_prc">£34.99</span>)
+				</label>
+               <div class="frequency_div">
+                  <div class="frequency_label">
+                     Deliver every
+                     <select class="frequency_num" name="properties[frequency_num]">
+                        <option value="1" style="display: none;">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                     </select>
+                     <span style="padding-left:10px">Week(s)</span><input class="frequency_type" value="2" name="properties[frequency_type]" type="hidden">
+                  </div>
+                  <div class="prepaid_div" style=""></div>
+               </div>
+            </div>
+         </div>
+         <a class="btn btn-shopify small {{ all_products['perform-bundle-pro'].id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Complete subscription</a>
+
+         <input name="quantity" class="input--ys qty-input pull-left" value="1" type="hidden">
+		 
+		 <button type="submit" class="step_suits_inner_btn addtobasket" data-text="fifth" style="" value="Add subscription to cart">Add To Basket</button>
+        <a href="https://www.vivolife.co.uk/pages/performlearnmore"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a>
+      </div>
+      <!-- bold-ro-liquid --> 
+      <div class="bold_add_to_orders" style="display: inline-block;"> </div>
+      <!-- bold-ro-liquid -->
+   </div>
+   <input class="frequency_type_text" value="Week(s)" name="properties[frequency_type_text]" type="hidden">
+   <input class="group_id" value="17809" name="properties[group_id]" type="hidden">
+   <input class="discounted_price" value="£34.99" name="properties[discounted_price]" type="hidden">
+   <input class="ro_discount_percentage" value="12.50" name="properties[_ro_discount_percentage]" type="hidden">
+   <input class="ro_unformatted_price" value="3499" name="properties[_ro_unformatted_price]" type="hidden">
+</form>
+<div class="hidden fifth_raw">
+  <span class="prdct_featured_image">{{ all_products['perform-bundle-pro'].featured_image }}</span>
+  <span class="prdct_link">{{ all_products['perform-bundle-pro'].url }}</span>
+  <span class="prdct_ttl">{{ all_products['perform-bundle-pro'].title }}</span>
+  <span class="ro_price_0">£34.99</span>
+  <span class="ro_unformatted_price_0">3499</span>
+  <span class="ro_price_1">£61.23</span>
+  <span class="ro_unformatted_price_1">6123</span>
+  <span class="ro_price_2">£83.89</span>
+  <span class="ro_unformatted_price_2">8389</span>
+</div>
+<!--- RO subscribe and save code ends - producy 5------>
+                  <!--div class="step_choose_subc fifth_ro_container">
+                    <input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)
+                  </div-->
+
+                </div>
+                <div style="display:none" id="fifth_raw"></div>
+
+                <!--a class="step_suits_inner_btn addtobasket" date-type="fifth">Add to basket</a>
+                <div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div-->
+                <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                <div class="step_end_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/KRuYgjCWsSY?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+              
+              </div>
+            </div>
+          </div>
+      </div>
+{% comment %}
+      <div>
+          <!-- sixth product -->
+          <div id="slide_5" class="item step_suits_inner">
+            <div class="step_part_sir">
+              <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/caramel_step3_new.png" alt="" border="0" />
+            </div>
+            <div class="step_bg_white">
+              <div class="step_suits_content_link">
+                <a href="#">SALTED MACA CARAMEL</a>
+              </div>
+              <div class="step_hide_cont">
+                <h2>PERFORM</h2>
+                <p>RAW plant protein & BCAA</p>
+                <p><strong>910G / 26 Servings </strong> <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating5_steps.png" alt="" border="0" /></p>
+                
+                <div class="sixth_container product_description">
+                  {{ all_products['perform-salted-maca-caramel-1'].description }}
+                </div>
+                
+				<div class="price_step_product sixth_product_price"><span><strike class="strike"></strike></span><span class="price-box__new"></span></div>
+
+                <div class="step_choose">
+                  <!--p>CHOOSE SIZE:</p>
+                  <select class="single-option-selector sixth_product_options" data-type="sixth" id="productSelect" name="id" style="width: 65%;">
+                    <option>Loading...</option>
+                  </select-->
+<!-- RO subscribe and save code starts - producy 6----->
+<form id="add-item-form-sixth" class="sixth_form" action="/cart/add" method="post">
+   <div id="skt_gc_line_items">
+      <input id="skt_gc_slug" name="properties[Customization]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_to" name="properties[To]" value="" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_id" value="382" disabled="disabled" type="hidden">
+      <input id="skt_gc_shop_name" value="Vivo Life" disabled="disabled" type="hidden">
+   </div>
+
+  <p>CHOOSE SIZE:</p>
+   <select name="id" id="productSelect" class="variant_id1 sixth_product_options single-option-selector" data-type="sixth" style="width: 65%;">
+		{% for vari in all_products['perform-salted-maca-caramel-1'].variants %}
+			<option data-sku="{{ vari.sku }}" value="{{ vari.id }}" data-price="{{ vari.price }}"  data-strike="{{ vari.compare_at_price }}">{{ vari.title }}</option>
+		{% endfor %}
+   </select>
+
+   <div class="bold-div" style="display: block;" hidden="">
+      <div class="wrapper">
+         <input name="shopify_customer_id" value="" type="hidden"> 
+         <input name="email" value="" type="hidden"> 
+         <input name="address1" value="" type="hidden"> 
+         <input name="address2" value="" type="hidden"> 
+         <input name="city" value="" type="hidden"> 
+         <input name="company" value="" type="hidden"> 
+         <input name="country" value="" type="hidden"> 
+         <input name="first_name" value="" type="hidden"> 
+         <input name="last_name" value="" type="hidden"> 
+         <input name="phone" value="" type="hidden"> 
+         <input name="province" value="" type="hidden"> 
+         <input name="zip" value="" type="hidden">
+         <div class="product_rp_div p{{ all_products['perform-salted-maca-caramel-1'].id }}">
+            
+           <div class="one_time_div">
+             <label class="one_time_radio_lbl"><input value="0" name="recurring_radio_btn" checked="checked" checked="checked" class="one_time_radio_btn" checked="" type="radio"><span> One-time purchase</span></label>
+           </div>
+           <div class="recurring_div bold-ro bold_active">
+				<label style="display:inline-block" class="recurring_radio_lbl step_choose_subc sixth_ro_container">
+                  <input value="2" name="recurring_radio_btn" class="mixed_radio_btn radio_step" type="radio"> subscribe & save <span class="ro_disc_per">12.5</span>% off (<span class="ro_disc_prc">£34.99</span>)
+				</label>
+               <div class="frequency_div">
+                  <div class="frequency_label">
+                     Deliver every
+                     <select class="frequency_num" name="properties[frequency_num]">
+                        <option value="1" style="display: none;">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                     </select>
+                     <span style="padding-left:10px">Week(s)</span><input class="frequency_type" value="2" name="properties[frequency_type]" type="hidden">
+                  </div>
+                  <div class="prepaid_div" style=""></div>
+               </div>
+            </div>
+         </div>
+         <a class="btn btn-shopify small {{ all_products['perform-salted-maca-caramel-1'].id }}_custom_button" data-toggle="modal" data-target="#myModal" style="display:none;">Complete subscription</a>
+
+         <input name="quantity" class="input--ys qty-input pull-left" value="1" type="hidden">
+		 
+		 <button type="submit" class="step_suits_inner_btn addtobasket" data-text="sixth" style="" value="Add subscription to cart">Add To Basket</button>
+        <a href="https://www.vivolife.co.uk/pages/performlearnmore"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a>
+      </div>
+      <!-- bold-ro-liquid --> 
+      <div class="bold_add_to_orders" style="display: inline-block;"> </div>
+      <!-- bold-ro-liquid -->
+   </div>
+   <input class="frequency_type_text" value="Week(s)" name="properties[frequency_type_text]" type="hidden">
+   <input class="group_id" value="17809" name="properties[group_id]" type="hidden">
+   <input class="discounted_price" value="£34.99" name="properties[discounted_price]" type="hidden">
+   <input class="ro_discount_percentage" value="12.50" name="properties[_ro_discount_percentage]" type="hidden">
+   <input class="ro_unformatted_price" value="3499" name="properties[_ro_unformatted_price]" type="hidden">
+</form>
+<div class="hidden sixth_raw">
+  <span class="prdct_featured_image">{{ all_products['perform-salted-maca-caramel-1'].featured_image }}</span>
+  <span class="prdct_link">{{ all_products['perform-salted-maca-caramel-1'].url }}</span>
+  <span class="prdct_ttl">{{ all_products['perform-salted-maca-caramel-1'].title }}</span>
+  <span class="ro_price_0">£34.99</span>
+  <span class="ro_unformatted_price_0">3499</span>
+  <span class="ro_price_1">£61.23</span>
+  <span class="ro_unformatted_price_1">6123</span>
+  <span class="ro_price_2">£83.89</span>
+  <span class="ro_unformatted_price_2">8389</span>
+</div>
+<!--- RO subscribe and save code ends - producy 6------>
+                  <!--div class="step_choose_subc sixth_ro_container"><input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)</div-->
+
+                </div>
+                <div style="display:none" id="sixth_raw"></div>
+
+                <!--a class="step_suits_inner_btn addtobasket" date-type="sixth">Add to basket</a>
+                <div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div-->
+                <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                <div class="step_end_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/KRuYgjCWsSY?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+              
+              </div>
+            </div>
+          </div>
+      </div>
+{% endcomment %}
+    </section>
+  </div>
+ <div class="fix_progress"> 
+  <div id="myProgress"><div id="myBar"></div><img src="https://cdn.shopify.com/s/files/1/1374/7199/files/progress_bar.png" alt="" border="0" /></div>
+  <div class="step_part"><a href="https://www.vivolife.co.uk/pages/step-4" class="step_next_btn" > NEXT</a></div>
+  </div>
+</div>
+
+<script type="text/javascript" language="javascript">
+  $(document).ready(function(){
+    /////////////////////
+    // first product - PERFORM: Raw cacao(9883793287)
+    load_content("https://www.vivolife.co.uk/products/perform-raw-cacao-1.js", "first");
+
+    // second product - PERFORM: Madagascan Vanilla(9883759047)
+    load_content("https://www.vivolife.co.uk/products/perform-madagascan-vanilla-2.js", "second");
+
+    // third product - PERFORM: Salted Maca Caramel(9883780423)
+    load_content("https://www.vivolife.co.uk/products/perform-salted-maca-caramel-1.js", "third");
+
+    // fourth product - PERFORM: PERFORM BUNDLE(8778826183)
+    load_content("https://www.vivolife.co.uk/products/perform-bundle-1.js", "fourth");
+
+    // fifth product - PERFORM: PERFORM BUNDLE PRO(9007844423)
+    load_content("https://www.vivolife.co.uk/products/perform-bundle-pro.js", "fifth");
+// repeat    
+    // sixth product - PERFORM: Salted Maca Caramel(9883780423)
+    //load_content("https://www.vivolife.co.uk/products/perform-salted-maca-caramel-1.js", "sixth");
+    
+  });
+</script>

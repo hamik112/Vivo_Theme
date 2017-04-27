@@ -1,0 +1,287 @@
+<div class="step_content_bg">
+    <div class="container">
+        <div class="col-xs-12 col-md-12 col-sm-12">
+            {{ page.content }}
+            <div class="step_part step_part_sir">
+                <h1><span>4.</span> ADD ONS</h1>
+                <div class="step3_thrive_him">upgrade your order, upgrade your health.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="step_suits_content">
+        <section class="vivo_slider">
+            <!-- get all products with addon tag-->
+            {% for product in collections.addon.products %}
+            {% assign product_index = product.handle %}
+            <div>
+                <div id="slide_{% increment p_index %}" class="item step_suits_inner">
+                    <div class="step_part_sir">
+                        <img src="{{ product | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" boder="0"/>
+                    </div>
+                    <div class="step_bg_white">
+                        <!--div class="step_suits_content_link">
+                          <a href="#">RAW CACAO</a>
+                        </div-->
+                        <div class="step_hide_cont">
+                            {% assign product_name_list = product.title | split:"-" %}
+                            {% assign product_name = product_name_list[0] %}
+                            <h2>{{ product_name }}</h2>
+                            <!-- Product Subtitle-->
+                            <p>{{ product.metafields.custom_fields["product_subtitle"] }}</p>
+                            <p><strong>{{ product.metafields.custom_fields["product_servings"] }}</strong>
+                                <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/rating_steps.png" alt=""
+                                     border="0"/>
+                            </p>
+                            <div class="{{product_index}}_container product_description">
+                                {{ product.description }}
+                            </div>
+
+                            <div class="price_step_product {{product_index}}_product_price">
+                                <span><strike class="strike"></strike></span>
+                                <span class="price-box__new"></span>
+                            </div>
+                            <div class="step_choose">
+                                <form id="add-item-form-{{product_index}}" class="{{product_index}}_form" action="/cart/add" method="post">
+                                    {% include 'skt_gc_lineitems' %}
+                                    {% if product.available %}
+
+                                    <p>CHOOSE FLAVOURS:</p>
+                                    <select name="id" id="productSelect"
+                                            class="variant_id1 {{product_index}}_product_options single-option-selector"
+                                            data-type="{{product_index}}" style="width: 65%;">
+                                        {% for vari in all_products[product.handle].variants %}
+                                        <option data-sku="{{ vari.sku }}" value="{{ vari.id }}"
+                                                data-price="{{ vari.price }}" data-strike="{{ vari.compare_at_price }}">
+                                            {{ vari.title }}
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+
+                                    <input type="hidden" value="{{ vari_id }}" name="variant_id" class="variant_id"/>
+                                    <div class="loading-div">Loading...</div>
+                                    <div class="bold-div" hidden>
+                                        <div class="wrapper">
+                                            <input name="shopify_customer_id" type="hidden" value="{{ customer.id }}">
+                                            <input name="email" type="hidden" value="{{ customer.email }}">
+                                            <input name="address1" type="hidden" value="{{ customer.default_address.address1 }}">
+                                            <input name="address2" type="hidden" value="{{ customer.default_address.address2 }}">
+                                            <input name="city" type="hidden" value="{{ customer.default_address.city }}">
+                                            <input name="company" type="hidden" value="{{ customer.default_address.company }}">
+                                            <input name="country" type="hidden" value="{{ customer.default_address.country }}">
+                                            <input name="first_name" type="hidden" value="{{ customer.default_address.first_name }}">
+                                            <input name="last_name" type="hidden" value="{{ customer.default_address.last_name }}">
+                                            <input name="phone" type="hidden" value="{{ customer.default_address.phone }}">
+                                            <input name="province" type="hidden" value="{{ customer.default_address.province }}">
+                                            <input name="zip" type="hidden" value="{{ customer.default_address.zip }}">
+                                            {% include 'bold-ro-atys' with product %}
+                                            <div class="pull-left"><span class="qty-label this">{{ 'products.product.quantity' | t }}</span></div>
+                                            <div class="pull-left"><input type="text" name="quantity" class="input--ys qty-input pull-left" value="1"></div>
+                                            <div class="pull-left atcShadow">
+                                                <button type="submit" class="btn btn--ys btn--xxl addtocart">Add To Existing Subscription</button>
+                                            </div>
+                                        </div>
+                                        <!-- bold-ro-liquid -->
+                                        <div class="bold_add_to_orders" style="display: inline-block;"></div> <!-- bold-ro-liquid -->
+                                        {% else %}
+                                        <br>
+                                        <div class="pull-left">
+                                            <button disabled class="btn btn--ys btn--xxl">{{ 'products.product.unavailable' | t }}</button>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        {% endif %}
+                                    </div>
+                                </form>
+
+                                <div class="hidden {{product_index}}_raw">
+                                    <span
+                                        class="prdct_featured_image">{{ all_products[product.handle].featured_image }}</span>
+                                    <span class="prdct_link">{{ all_products[product.handle].url }}</span>
+                                    <span class="prdct_ttl">{{ all_products[product.handle].title }}</span>
+
+                                    {% assign vari_index = 0 %}
+                                    {% for vari in all_products[product.handle].variants %}
+                                    <span class="ro_price_{{ vari_index }}">{{ vari.price | money_with_currency }}</span>
+                                    <span class="ro_unformatted_price_{{ vari_index }}">{{ vari.price }}</span>
+                                    {% assign vari_index = vari_index | plugs: 1 %}
+                                    {% endfor %}
+                                </div>
+                                <!--- RO subscribe and save code ends - product 1------>
+                                <!--div class="step_choose_subc {{product_index}}_ro_container"><input class="radio_step" name="gender" value="" type="radio"> subscribe & save  12.5% off (£69.78)</div-->
+
+                            </div>
+                            <div style="display:none" id="{{product_index}}_raw"></div>
+
+                            <!--a class="step_suits_inner_btn addtobasket" date-type="{{product_index}}">Add to basket</a>
+                            <a href="https://www.vivolife.co.uk/pages/matcha"><div class="learn_more_step">Learn More <img src="https://cdn.shopify.com/s/files/1/1374/7199/files/learn_more_btn.png" alt="" border="0" /></div></a-->
+                            <span class="step_money_back">30 day money back guarantee <br/>20p goes to STREETGAMES charity</span>
+                            <div class="step_end_video">
+                                <iframe width="560" height="315" src="{{product.metafields.custom_fields['product_youtube_url']}} "
+                                        frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+    <div class="fix_progress">
+        <!--div class="step_part"><a href="javascript:void(0);" class="step_next_btn" >Final Step</a></div-->
+        <!-------------------------------------------------------------------------------->
+        <div class="cart_items_container">
+
+            <form action="/cart" method="post" novalidate>
+                <div style="display:none;">
+                    <!-- Shopping cart table -->
+                    <div class="shopping-cart-table">
+                        <script>mixed_cart = false;</script>    <!-- if false goes to default checkout -->
+                        {% for item in cart.items %}
+                        <!-- bold-ro-liquid -->
+                        {% if item.properties.frequency_num %}
+                        <script>mixed_cart = true;</script><!-- if true goes to RO checkout -->
+                        {% endif %}
+                        <!-- bold-ro-liquid -->
+                        {% endfor %}
+                    </div>
+                    <!-- /Shopping cart table -->
+                    <div class="cart-collaterals">
+                        <input name="shopify_customer_id" type="hidden" value="{{ customer.id }}">
+                        <input name="email" type="hidden" value="{{ customer.email }}">
+                        <input name="address1" type="hidden" value="{{ customer.default_address.address1 }}">
+                        <input name="address2" type="hidden" value="{{ customer.default_address.address2 }}">
+                        <input name="city" type="hidden" value="{{ customer.default_address.city }}">
+                        <input name="company" type="hidden" value="{{ customer.default_address.company }}">
+                        <input name="country" type="hidden" value="{{ customer.default_address.country }}">
+                        <input name="first_name" type="hidden" value="{{ customer.default_address.first_name }}">
+                        <input name="last_name" type="hidden" value="{{ customer.default_address.last_name }}">
+                        <input name="phone" type="hidden" value="{{ customer.default_address.phone }}">
+                        <input name="province" type="hidden" value="{{ customer.default_address.province }}">
+                        <input name="zip" type="hidden" value="{{ customer.default_address.zip }}">
+                        {% include 'bold-ro-cart' %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="step_part"><a href="/tools/checkout/front_end/login" class="step_next_btn">BACK TO ACCOUNT</a></div>
+                </div>
+            </form>
+        </div>
+        <!-------------------------------------------------------------------------------->
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function(){
+        var step_page = true;
+
+        {% for product in collections.addon.products %}
+        {% assign product_index = product.handle %}
+        load_content("https://www.vivolife.co.uk/products/{{product_index}}.js", "{{product_index}}");
+        {% endfor %}
+    });
+</script>
+
+<script>
+    jQuery(window).load(function () {
+        jQuery('.frequency_num').prop('selectedIndex', 1);
+        jQuery('.frequency_num option[value="1"]').hide();
+        jQuery('.loading-div').remove();
+        jQuery('.bold-div').show();
+    })
+</script>
+
+
+<script>
+    var selectCallback = function (variant, selector) {
+        if (typeof timber !== 'undefined') {
+            timber.productPage({
+                money_format: "{{ shop.money_format }}",
+                variant: variant,
+                selector: selector,
+                translations: {
+                    add_to_cart: "{{ 'products.product.add_to_cart' | t }}",
+                    sold_out: "{{ 'products.product.sold_out' | t }}",
+                    unavailable: "{{ 'products.product.unavailable' | t }}"
+                }
+            });
+        }
+        ;
+    };
+    jQuery(function ($) {
+        new Shopify.OptionSelectors('productSelect', {
+            product: {{product | json}},
+        onVariantSelected: selectCallback,
+            enableHistoryState:true});
+
+        // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
+        {% if product.options.size == 1 and product.options.first != 'Title' %}
+        $('.selector-wrapper:eq(0)').prepend('<label for="productSelect-option-0">{{ product.options.first | escape }}</label>');
+        {% endif %}
+
+        // Hide selectors if we only have 1 variant and its title contains 'Default'.
+        {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
+        $('.selector-wrapper').addClass("hidethis");
+        $('#productSelect.product-single__variants').addClass("hidethis");
+        {% endif %}
+    });
+    $(window).load(function () {
+        $("body").addClass("loaded");
+    });
+    $('.skt_gc_button_container').bind("DOMSubtreeModified", function () {
+        $(".bold-div").removeAttr("hidden");
+    });
+</script>
+
+
+
+<script>
+
+    var modal;
+
+    var inter = setInterval(function(){
+        if($('#add_to_order_modal').length)
+        {
+            modal = $('#add_to_order_modal')[0];
+
+        }
+    }, 300);
+
+
+    $(window).click(function(){
+        if (event.target == modal) {
+            $(modal).addClass('boldToggleClass');
+        }
+    });
+
+    $(document).on('click', '.close_modal_btn, .close', function(){
+        $('#add_to_order_modal').addClass('boldToggleClass');
+    });
+
+    $(document).on('click', '.add_modal_btn', function(){
+        $('#add_to_order_modal').removeClass('boldToggleClass');
+    });
+
+</script>
+
+
+<style>
+    .shopify-preview-bar {
+        display:none;
+    }
+  
+    .modal-backdrop.in{
+        display:none !important
+    }
+
+    #add_to_order_modal{
+        background: rgba(10, 10, 10, 0.75);
+    }
+
+    .boldToggleClass{
+        visibility: hidden !important;
+    }
+
+</style>
